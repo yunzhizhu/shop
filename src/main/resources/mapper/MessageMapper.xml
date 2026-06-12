@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.MessageMapper">
+
+    <!-- 根据会话ID获取消息历史记录 - 优化版本 -->
+    <select id="selectMessageHistoryByConversation" resultType="com.example.shop.dto.MessageHistoryResponse">
+        SELECT 
+            m.message_id as messageId,
+            m.sender_id as senderId,
+            CASE 
+                WHEN m.sender_id = 0 THEN '系统'
+                ELSE COALESCE(u.username, '未知用户')
+            END as senderName,
+            u.avatar as senderAvatar,
+            m.content,
+            m.message_type as messageType,
+            m.is_read as isRead,
+            m.created_at as createdAt,
+            m.image_url as imageUrl,
+            CASE 
+                WHEN m.sender_id = 0 THEN true
+                ELSE false
+            END as isSystem
+        FROM message m
+        LEFT JOIN user u ON m.sender_id = u.user_id AND m.sender_id > 0
+        WHERE m.conversation_id = #{conversationId}
+        ORDER BY m.created_at DESC
+    </select>
+
+    <!-- 标记会话中的消息为已读 -->
+    <update id="markConversationAsRead">
+        UPDATE message 
+        SET is_read = 1
+        WHERE conversation_id = #{conversationId}
+        AND receiver_id = #{userId}
+        AND is_read = 0
+    </update>
+
+    <!-- 标记单条消息为已读 -->
+    <update id="markSingleMessageAsRead">
+        UPDATE message 
+        SET is_read = 1
+        WHERE message_id = #{messageId}
+        AND receiver_id = #{userId}
+        AND is_read = 0
+    </update>
+
+    <!-- 获取用户消息列表 -->
+    <select id="selectMessageList" resultType="com.example.shop.dto.MessageListResponse">
+        SELECT 
+            sender_info.sender_id as senderId,
+            sender_info.sender_name as senderName,
+            sender_info.sender_avatar as senderAvatar,
+            sender_info.preview_content as previewContent,
+            sender_info.last_time as lastTime,
+            sender_info.is_system as isSystem,
+            sender_info.message_type as messageType
+        FROM (
+            -- 私信消息（非系统通知）
+            SELECT 
+                m.sender_id,
+                u.username as sender_name,
+                u.avatar as sender_avatar,
+                CASE 
+                    WHEN m.message_type = 2 THEN '[图片]'
+                    ELSE LEFT(m.content, 50)
+                END as preview_content,
+                m.created_at as last_time,
+                false as is_system,
+                m.message_type
+            FROM message m
+            LEFT JOIN user u ON m.sender_id = u.user_id
+            WHERE m.receiver_id = #{userId}
+            AND m.message_type != 3
+            
+            UNION ALL
+            
+            -- 系统通知
+            SELECT 
+                0 as sender_id,
+                '系统通知' as sender_name,
+                null as sender_avatar,
+                LEFT(m.content, 50) as preview_content,
+                m.created_at as last_time,
+                true as is_system,
+                m.message_type
+            FROM message m
+            WHERE m.receiver_id = #{userId}
+            AND m.message_type = 3
+        ) sender_info
+        ORDER BY sender_info.last_time DESC
+    </select>
+
+    <!-- 获取聊天历史记录 -->
+    <select id="selectMessageHistory" resultType="com.example.shop.dto.MessageHistoryResponse">
+        SELECT 
+            m.message_id as messageId,
+            m.sender_id as senderId,
+            CASE 
+                WHEN m.sender_id = #{userId} THEN '我'
+                ELSE u.username
+            END as senderName,
+            u.avatar as senderAvatar,
+            m.content,
+            m.message_type as messageType,
+            m.is_read as isRead,
+            m.created_at as createdAt,
+            false as isSystem
+        FROM message m
+        LEFT JOIN user u ON m.sender_id = u.user_id
+        WHERE ((m.sender_id = #{userId} AND m.receiver_id = #{chatUserId})
+           OR (m.sender_id = #{chatUserId} AND m.receiver_id = #{userId}))
+        AND m.message_type != 3
+        ORDER BY m.created_at DESC
+    </select>
+
+    <!-- 标记消息为已读 -->
+    <update id="markAsRead">
+        UPDATE message 
+        SET is_read = 1
+        WHERE receiver_id = #{userId} 
+        AND sender_id = #{senderId}
+        AND is_read = 0
+        AND message_type != 3
+    </update>
+
+    <!-- 获取未读消息数 -->
+    <select id="getUnreadCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) 
+        FROM message 
+        WHERE receiver_id = #{userId} 
+        AND sender_id = #{senderId}
+        AND is_read = 0
+        AND message_type != 3
+    </select>
+
+    <!-- 获取系统通知列表（管理员） - 按内容分组，避免重复 -->
+    <select id="selectAdminNotifications" resultType="com.example.shop.dto.MessageHistoryResponse">
+        SELECT 
+            MIN(m.message_id) as messageId,
+            MIN(m.conversation_id) as conversationId,
+            m.sender_id as senderId,
+            '系统' as senderName,
+            null as senderAvatar,
+            COUNT(DISTINCT m.receiver_id) as receiverId,
+            GROUP_CONCAT(DISTINCT u.username ORDER BY u.username SEPARATOR ', ') as receiverName,
+            m.content,
+            m.content_type as contentType,
+            m.message_type as messageType,
+            SUM(CASE WHEN m.is_read = 1 THEN 1 ELSE 0 END) as isRead,
+            MAX(m.created_at) as createdAt,
+            m.image_url as imageUrl,
+            true as isSystem
+        FROM message m
+        LEFT JOIN user u ON m.receiver_id = u.user_id
+        WHERE m.sender_id = 0
+        <if test="contentType != null">
+            AND m.content_type = #{contentType}
+        </if>
+        GROUP BY m.content, m.content_type, m.message_type, m.image_url, m.sender_id
+        ORDER BY MAX(m.created_at) DESC
+    </select>
+
+</mapper>

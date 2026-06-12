@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.shop.ConversationServiceTest" time="0.403" tests="7" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\javawork2\shop\target\test-classes;D:\javawork2\shop\target\classes;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-web\3.4.8\spring-boot-starter-web-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter\3.4.8\spring-boot-starter-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-logging\3.4.8\spring-boot-starter-logging-3.4.8.jar;D:\apache-maven-3.9.6\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar;D:\apache-maven-3.9.6\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar;D:\apache-maven-3.9.6\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;D:\apache-maven-3.9.6\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;D:\apache-maven-3.9.6\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;D:\apache-maven-3.9.6\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;D:\apache-maven-3.9.6\repository\org\yaml\snakeyaml\2.3\snakeyaml-2.3.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-json\3.4.8\spring-boot-starter-json-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.18.4\jackson-datatype-jdk8-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.18.4\jackson-module-parameter-names-2.18.4.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-tomcat\3.4.8\spring-boot-starter-tomcat-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.43\tomcat-embed-core-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.43\tomcat-embed-websocket-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-web\6.2.9\spring-web-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-beans\6.2.9\spring-beans-6.2.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-observation\1.14.9\micrometer-observation-1.14.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-commons\1.14.9\micrometer-commons-1.14.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-webmvc\6.2.9\spring-webmvc-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-context\6.2.9\spring-context-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-expression\6.2.9\spring-expression-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-security\3.4.8\spring-boot-starter-security-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-aop\6.2.9\spring-aop-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-config\6.4.8\spring-security-config-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-web\6.4.8\spring-security-web-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-validation\3.4.8\spring-boot-starter-validation-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.43\tomcat-embed-el-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\hibernate\validator\hibernate-validator\8.0.2.Final\hibernate-validator-8.0.2.Final.jar;D:\apache-maven-3.9.6\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-websocket\3.4.8\spring-boot-starter-websocket-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-messaging\6.2.9\spring-messaging-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-websocket\6.2.9\spring-websocket-6.2.9.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-spring-boot3-starter\3.5.7\mybatis-plus-spring-boot3-starter-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus\3.5.7\mybatis-plus-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-core\3.5.7\mybatis-plus-core-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-annotation\3.5.7\mybatis-plus-annotation-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-extension\3.5.7\mybatis-plus-extension-3.5.7.jar;D:\apache-maven-3.9.6\repository\org\mybatis\mybatis\3.5.16\mybatis-3.5.16.jar;D:\apache-maven-3.9.6\repository\com\github\jsqlparser\jsqlparser\4.9\jsqlparser-4.9.jar;D:\apache-maven-3.9.6\repository\org\mybatis\mybatis-spring\3.0.3\mybatis-spring-3.0.3.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-spring-boot-autoconfigure\3.5.7\mybatis-plus-spring-boot-autoconfigure-3.5.7.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-autoconfigure\3.4.8\spring-boot-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-jdbc\3.4.8\spring-boot-starter-jdbc-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-jdbc\6.2.9\spring-jdbc-6.2.9.jar;D:\apache-maven-3.9.6\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-databind\2.18.4\jackson-databind-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.4\jackson-annotations-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-core\2.18.4.1\jackson-core-2.18.4.1.jar;D:\apache-maven-3.9.6\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;D:\apache-maven-3.9.6\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-aop\3.4.8\spring-boot-starter-aop-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\aspectj\aspectjweaver\1.9.24\aspectjweaver-1.9.24.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-devtools\3.4.8\spring-boot-devtools-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot\3.4.8\spring-boot-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-test\3.4.8\spring-boot-starter-test-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-test\3.4.8\spring-boot-test-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.4.8\spring-boot-test-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;D:\apache-maven-3.9.6\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;D:\apache-maven-3.9.6\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;D:\apache-maven-3.9.6\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;D:\apache-maven-3.9.6\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;D:\apache-maven-3.9.6\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;D:\apache-maven-3.9.6\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;D:\apache-maven-3.9.6\repository\org\assertj\assertj-core\3.26.3\assertj-core-3.26.3.jar;D:\apache-maven-3.9.6\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;D:\apache-maven-3.9.6\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;D:\apache-maven-3.9.6\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;D:\apache-maven-3.9.6\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;D:\apache-maven-3.9.6\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;D:\apache-maven-3.9.6\repository\org\mockito\mockito-core\5.14.2\mockito-core-5.14.2.jar;D:\apache-maven-3.9.6\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar;D:\apache-maven-3.9.6\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;D:\apache-maven-3.9.6\repository\org\mockito\mockito-junit-jupiter\5.14.2\mockito-junit-jupiter-5.14.2.jar;D:\apache-maven-3.9.6\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;D:\apache-maven-3.9.6\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-core\6.2.9\spring-core-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-jcl\6.2.9\spring-jcl-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-test\6.2.9\spring-test-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\xmlunit\xmlunit-core\2.10.3\xmlunit-core-2.10.3.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-test\6.4.8\spring-security-test-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-core\6.4.8\spring-security-core-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-crypto\6.4.8\spring-security-crypto-6.4.8.jar;D:\apache-maven-3.9.6\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-data-redis\3.4.8\spring-boot-starter-data-redis-3.4.8.jar;D:\apache-maven-3.9.6\repository\io\lettuce\lettuce-core\6.4.2.RELEASE\lettuce-core-6.4.2.RELEASE.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-common\4.1.123.Final\netty-common-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-handler\4.1.123.Final\netty-handler-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-transport-native-unix-common\4.1.123.Final\netty-transport-native-unix-common-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-transport\4.1.123.Final\netty-transport-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\projectreactor\reactor-core\3.7.8\reactor-core-3.7.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-redis\3.4.8\spring-data-redis-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-keyvalue\3.4.8\spring-data-keyvalue-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-commons\3.4.8\spring-data-commons-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-tx\6.2.9\spring-tx-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-oxm\6.2.9\spring-oxm-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-context-support\6.2.9\spring-context-support-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson-spring-boot-starter\3.25.2\redisson-spring-boot-starter-3.25.2.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-actuator\3.4.8\spring-boot-starter-actuator-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.4.8\spring-boot-actuator-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-actuator\3.4.8\spring-boot-actuator-3.4.8.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-jakarta9\1.14.9\micrometer-jakarta9-1.14.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-core\1.14.9\micrometer-core-1.14.9.jar;D:\apache-maven-3.9.6\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;D:\apache-maven-3.9.6\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson\3.25.2\redisson-3.25.2.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-codec\4.1.123.Final\netty-codec-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-buffer\4.1.123.Final\netty-buffer-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-resolver\4.1.123.Final\netty-resolver-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-resolver-dns\4.1.123.Final\netty-resolver-dns-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-codec-dns\4.1.123.Final\netty-codec-dns-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\javax\cache\cache-api\1.1.1\cache-api-1.1.1.jar;D:\apache-maven-3.9.6\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;D:\apache-maven-3.9.6\repository\io\reactivex\rxjava3\rxjava\3.1.11\rxjava-3.1.11.jar;D:\apache-maven-3.9.6\repository\org\jboss\marshalling\jboss-marshalling\2.0.11.Final\jboss-marshalling-2.0.11.Final.jar;D:\apache-maven-3.9.6\repository\org\jboss\marshalling\jboss-marshalling-river\2.0.11.Final\jboss-marshalling-river-2.0.11.Final.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\kryo\5.5.0\kryo-5.5.0.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\reflectasm\1.11.9\reflectasm-1.11.9.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\minlog\1.3.1\minlog-1.3.1.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.18.4\jackson-dataformat-yaml-2.18.4.jar;D:\apache-maven-3.9.6\repository\org\jodd\jodd-bean\5.1.6\jodd-bean-5.1.6.jar;D:\apache-maven-3.9.6\repository\org\jodd\jodd-core\5.1.6\jodd-core-5.1.6.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson-spring-data-32\3.25.2\redisson-spring-data-32-3.25.2.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.4\jackson-datatype-jsr310-2.18.4.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="APPLICATION_NAME" value="shop"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="D:\jdk17.0.8\bin"/>
+    <property name="sun.java.command" value="C:\Users\86198\AppData\Local\Temp\surefire5546416069659178114\surefirebooter-20260423171400097_3.jar C:\Users\86198\AppData\Local\Temp\surefire5546416069659178114 2026-04-23T17-13-59_682-jvmRun1 surefire-20260423171400097_1tmp surefire_0-20260423171400097_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\javawork2\shop\target\test-classes;D:\javawork2\shop\target\classes;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-web\3.4.8\spring-boot-starter-web-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter\3.4.8\spring-boot-starter-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-logging\3.4.8\spring-boot-starter-logging-3.4.8.jar;D:\apache-maven-3.9.6\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar;D:\apache-maven-3.9.6\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar;D:\apache-maven-3.9.6\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;D:\apache-maven-3.9.6\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;D:\apache-maven-3.9.6\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;D:\apache-maven-3.9.6\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;D:\apache-maven-3.9.6\repository\org\yaml\snakeyaml\2.3\snakeyaml-2.3.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-json\3.4.8\spring-boot-starter-json-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.18.4\jackson-datatype-jdk8-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.18.4\jackson-module-parameter-names-2.18.4.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-tomcat\3.4.8\spring-boot-starter-tomcat-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.43\tomcat-embed-core-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.43\tomcat-embed-websocket-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-web\6.2.9\spring-web-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-beans\6.2.9\spring-beans-6.2.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-observation\1.14.9\micrometer-observation-1.14.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-commons\1.14.9\micrometer-commons-1.14.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-webmvc\6.2.9\spring-webmvc-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-context\6.2.9\spring-context-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-expression\6.2.9\spring-expression-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-security\3.4.8\spring-boot-starter-security-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-aop\6.2.9\spring-aop-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-config\6.4.8\spring-security-config-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-web\6.4.8\spring-security-web-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-validation\3.4.8\spring-boot-starter-validation-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.43\tomcat-embed-el-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\hibernate\validator\hibernate-validator\8.0.2.Final\hibernate-validator-8.0.2.Final.jar;D:\apache-maven-3.9.6\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-websocket\3.4.8\spring-boot-starter-websocket-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-messaging\6.2.9\spring-messaging-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-websocket\6.2.9\spring-websocket-6.2.9.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-spring-boot3-starter\3.5.7\mybatis-plus-spring-boot3-starter-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus\3.5.7\mybatis-plus-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-core\3.5.7\mybatis-plus-core-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-annotation\3.5.7\mybatis-plus-annotation-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-extension\3.5.7\mybatis-plus-extension-3.5.7.jar;D:\apache-maven-3.9.6\repository\org\mybatis\mybatis\3.5.16\mybatis-3.5.16.jar;D:\apache-maven-3.9.6\repository\com\github\jsqlparser\jsqlparser\4.9\jsqlparser-4.9.jar;D:\apache-maven-3.9.6\repository\org\mybatis\mybatis-spring\3.0.3\mybatis-spring-3.0.3.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-spring-boot-autoconfigure\3.5.7\mybatis-plus-spring-boot-autoconfigure-3.5.7.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-autoconfigure\3.4.8\spring-boot-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-jdbc\3.4.8\spring-boot-starter-jdbc-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-jdbc\6.2.9\spring-jdbc-6.2.9.jar;D:\apache-maven-3.9.6\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-databind\2.18.4\jackson-databind-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.4\jackson-annotations-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-core\2.18.4.1\jackson-core-2.18.4.1.jar;D:\apache-maven-3.9.6\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;D:\apache-maven-3.9.6\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-aop\3.4.8\spring-boot-starter-aop-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\aspectj\aspectjweaver\1.9.24\aspectjweaver-1.9.24.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-devtools\3.4.8\spring-boot-devtools-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot\3.4.8\spring-boot-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-test\3.4.8\spring-boot-starter-test-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-test\3.4.8\spring-boot-test-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.4.8\spring-boot-test-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;D:\apache-maven-3.9.6\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;D:\apache-maven-3.9.6\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;D:\apache-maven-3.9.6\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;D:\apache-maven-3.9.6\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;D:\apache-maven-3.9.6\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;D:\apache-maven-3.9.6\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;D:\apache-maven-3.9.6\repository\org\assertj\assertj-core\3.26.3\assertj-core-3.26.3.jar;D:\apache-maven-3.9.6\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;D:\apache-maven-3.9.6\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;D:\apache-maven-3.9.6\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;D:\apache-maven-3.9.6\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;D:\apache-maven-3.9.6\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;D:\apache-maven-3.9.6\repository\org\mockito\mockito-core\5.14.2\mockito-core-5.14.2.jar;D:\apache-maven-3.9.6\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar;D:\apache-maven-3.9.6\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;D:\apache-maven-3.9.6\repository\org\mockito\mockito-junit-jupiter\5.14.2\mockito-junit-jupiter-5.14.2.jar;D:\apache-maven-3.9.6\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;D:\apache-maven-3.9.6\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-core\6.2.9\spring-core-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-jcl\6.2.9\spring-jcl-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-test\6.2.9\spring-test-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\xmlunit\xmlunit-core\2.10.3\xmlunit-core-2.10.3.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-test\6.4.8\spring-security-test-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-core\6.4.8\spring-security-core-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-crypto\6.4.8\spring-security-crypto-6.4.8.jar;D:\apache-maven-3.9.6\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-data-redis\3.4.8\spring-boot-starter-data-redis-3.4.8.jar;D:\apache-maven-3.9.6\repository\io\lettuce\lettuce-core\6.4.2.RELEASE\lettuce-core-6.4.2.RELEASE.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-common\4.1.123.Final\netty-common-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-handler\4.1.123.Final\netty-handler-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-transport-native-unix-common\4.1.123.Final\netty-transport-native-unix-common-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-transport\4.1.123.Final\netty-transport-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\projectreactor\reactor-core\3.7.8\reactor-core-3.7.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-redis\3.4.8\spring-data-redis-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-keyvalue\3.4.8\spring-data-keyvalue-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-commons\3.4.8\spring-data-commons-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-tx\6.2.9\spring-tx-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-oxm\6.2.9\spring-oxm-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-context-support\6.2.9\spring-context-support-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson-spring-boot-starter\3.25.2\redisson-spring-boot-starter-3.25.2.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-actuator\3.4.8\spring-boot-starter-actuator-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.4.8\spring-boot-actuator-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-actuator\3.4.8\spring-boot-actuator-3.4.8.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-jakarta9\1.14.9\micrometer-jakarta9-1.14.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-core\1.14.9\micrometer-core-1.14.9.jar;D:\apache-maven-3.9.6\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;D:\apache-maven-3.9.6\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson\3.25.2\redisson-3.25.2.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-codec\4.1.123.Final\netty-codec-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-buffer\4.1.123.Final\netty-buffer-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-resolver\4.1.123.Final\netty-resolver-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-resolver-dns\4.1.123.Final\netty-resolver-dns-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-codec-dns\4.1.123.Final\netty-codec-dns-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\javax\cache\cache-api\1.1.1\cache-api-1.1.1.jar;D:\apache-maven-3.9.6\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;D:\apache-maven-3.9.6\repository\io\reactivex\rxjava3\rxjava\3.1.11\rxjava-3.1.11.jar;D:\apache-maven-3.9.6\repository\org\jboss\marshalling\jboss-marshalling\2.0.11.Final\jboss-marshalling-2.0.11.Final.jar;D:\apache-maven-3.9.6\repository\org\jboss\marshalling\jboss-marshalling-river\2.0.11.Final\jboss-marshalling-river-2.0.11.Final.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\kryo\5.5.0\kryo-5.5.0.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\reflectasm\1.11.9\reflectasm-1.11.9.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\minlog\1.3.1\minlog-1.3.1.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.18.4\jackson-dataformat-yaml-2.18.4.jar;D:\apache-maven-3.9.6\repository\org\jodd\jodd-bean\5.1.6\jodd-bean-5.1.6.jar;D:\apache-maven-3.9.6\repository\org\jodd\jodd-core\5.1.6\jodd-core-5.1.6.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson-spring-data-32\3.25.2\redisson-spring-data-32-3.25.2.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.4\jackson-datatype-jsr310-2.18.4.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\86198"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="D:\jdk17.0.8"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\javawork2\shop"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="GBK"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\86198\AppData\Local\Temp\surefire5546416069659178114\surefirebooter-20260423171400097_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.8+9-LTS-211"/>
+    <property name="user.name" value="86198"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="D:\apache-maven-3.9.6\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\86198\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.8"/>
+    <property name="user.dir" value="D:\javawork2\shop"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="18044"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="GBK"/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\jdk17.0.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;D:\jdk17.0.8\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;&quot;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;&quot;;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;&quot;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\jdk17.0.8\jre\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\nodejs\&quot;;D:\jdk17.0.8\bin;D:\node\;d:\cursor\resources\app\bin;C:\Program Files (x86)\Tencent\微信web开发者工具\dll;C:\Pro;ram Files\NVIDIA Corporation\NVIDIA App\NvDLISR;D:\redis-windows-7.2.4;C:\Program Files\Git\cmd;D:\MySQL\MySQL Server 8.0\bin;C:\Users\86198\AppData\Local\Microsoft\WindowsApps;D:\apache-maven-3.9.6\bin;D:\jdk17.0.8\bin;C:\Users\86198\AppData\Roaming\npm;C:\Users\86198\AppData\Local\Programs\Microsoft VS Code\bin;D:\mingw64\bin;D:\node;C:\Users\86198\AppData\Local\Programs\cursor\resources\app\bin;D:\Kiro\bin;C:\Users\86198\AppData\Local\Programs\Ollama;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.8+9-LTS-211"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[shop] "/>
+  </properties>
+  <testcase name="testGetTotalUnreadCount" classname="com.example.shop.ConversationServiceTest" time="0.189">
+    <system-out><![CDATA[2026-04-23 17:14:14 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.shop.ConversationServiceTest]: ConversationServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-23 17:14:14 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.shop.ShopApplication for test class com.example.shop.ConversationServiceTest
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6]
+JDBC Connection [HikariProxyConnection@950205379 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO conversation ( conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_300_400(String), 300(Long), 1(Integer), 400(Long), Test User(String), null, null, null, null, 5(Integer), 5(Integer), 0(Integer), 2026-04-23T17:14:14.906440(LocalDateTime), 2026-04-23T17:14:14.914106(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6] from current transaction
+==> Parameters: private_300_500(String), 300(Long), 1(Integer), 500(Long), Test User(String), null, null, null, null, 3(Integer), 3(Integer), 0(Integer), 2026-04-23T17:14:14.968824900(LocalDateTime), 2026-04-23T17:14:14.968824900(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6] from current transaction
+==> Parameters: system_300(String), 300(Long), 2(Integer), 0(Long), 系统通知(String), null, null, null, null, 2(Integer), 2(Integer), 0(Integer), 2026-04-23T17:14:14.971350600(LocalDateTime), 2026-04-23T17:14:14.971350600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6]
+2026-04-23 17:14:14 [main] DEBUG c.e.s.s.impl.ConversationServiceImpl - 获取用户总未读数: userId=300
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6] from current transaction
+==>  Preparing: SELECT COALESCE(SUM(unread_count), 0) FROM conversation WHERE user_id = ?
+==> Parameters: 300(Long)
+<==    Columns: COALESCE(SUM(unread_count), 0)
+<==        Row: 10
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6]
+2026-04-23 17:14:15 [main] DEBUG c.e.s.s.impl.ConversationServiceImpl - 获取用户总未读数: userId=999
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6] from current transaction
+==> Parameters: 999(Long)
+<==    Columns: COALESCE(SUM(unread_count), 0)
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fd79ac6]
+]]></system-out>
+  </testcase>
+  <testcase name="testPinConversation" classname="com.example.shop.ConversationServiceTest" time="0.065">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+JDBC Connection [HikariProxyConnection@1071117637 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO conversation ( conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_100_200(String), 100(Long), 1(Integer), 100(Long), Test User(String), null, null, null, null, 0(Integer), 0(Integer), 0(Integer), 2026-04-23T17:14:15.040852800(LocalDateTime), 2026-04-23T17:14:15.040852800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 设置会话置顶状态: conversationId=private_100_200, userId=100, isPinned=true
+2026-04-23 17:14:15 [main] DEBUG c.e.s.s.impl.ConversationServiceImpl - 验证会话访问权限: conversationId=private_100_200, userId=100
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b] from current transaction
+==>  Preparing: SELECT conversation_id,user_id,conversation_type,target_id,target_name,target_avatar,last_message_id,last_message_content,last_message_time,unread_count,total_count,is_pinned,created_at,updated_at FROM conversation WHERE (conversation_id = ? AND user_id = ?)
+==> Parameters: private_100_200(String), 100(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 100, 1, 100, Test User, null, null, null, null, 0, 0, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b] from current transaction
+==>  Preparing: UPDATE conversation SET is_pinned = ?, updated_at = NOW() WHERE conversation_id = ? AND user_id = ?
+==> Parameters: 1(Integer), private_100_200(String), 100(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b] from current transaction
+==> Parameters: private_100_200(String), 100(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 100, 1, 100, Test User, null, null, null, null, 0, 0, 1, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 设置会话置顶状态: conversationId=private_100_200, userId=100, isPinned=false
+2026-04-23 17:14:15 [main] DEBUG c.e.s.s.impl.ConversationServiceImpl - 验证会话访问权限: conversationId=private_100_200, userId=100
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b] from current transaction
+==> Parameters: private_100_200(String), 100(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 100, 1, 100, Test User, null, null, null, null, 0, 0, 1, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b] from current transaction
+==> Parameters: 0(Integer), private_100_200(String), 100(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b] from current transaction
+==> Parameters: private_100_200(String), 100(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 100, 1, 100, Test User, null, null, null, null, 0, 0, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@193b6f5b]
+]]></system-out>
+  </testcase>
+  <testcase name="testUnreadCountOperations" classname="com.example.shop.ConversationServiceTest" time="0.029">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+JDBC Connection [HikariProxyConnection@1507431017 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO conversation ( conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_100_200(String), 200(Long), 1(Integer), 100(Long), Test User(String), null, null, null, null, 0(Integer), 0(Integer), 0(Integer), 2026-04-23T17:14:15.109378500(LocalDateTime), 2026-04-23T17:14:15.109378500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 更新会话未读数: conversationId=private_100_200, userId=200, delta=3
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb] from current transaction
+==>  Preparing: UPDATE conversation SET unread_count = unread_count + ?, updated_at = NOW() WHERE conversation_id = ? AND user_id = ?
+==> Parameters: 3(Integer), private_100_200(String), 200(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb] from current transaction
+==>  Preparing: SELECT conversation_id,user_id,conversation_type,target_id,target_name,target_avatar,last_message_id,last_message_content,last_message_time,unread_count,total_count,is_pinned,created_at,updated_at FROM conversation WHERE (conversation_id = ? AND user_id = ?)
+==> Parameters: private_100_200(String), 200(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 200, 1, 100, Test User, null, null, null, null, 3, 0, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 更新会话未读数: conversationId=private_100_200, userId=200, delta=-1
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb] from current transaction
+==> Parameters: -1(Integer), private_100_200(String), 200(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb] from current transaction
+==> Parameters: private_100_200(String), 200(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 200, 1, 100, Test User, null, null, null, null, 2, 0, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 重置会话未读数: conversationId=private_100_200, userId=200
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb] from current transaction
+==>  Preparing: UPDATE conversation SET unread_count = 0, updated_at = NOW() WHERE conversation_id = ? AND user_id = ?
+==> Parameters: private_100_200(String), 200(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb] from current transaction
+==> Parameters: private_100_200(String), 200(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 200, 1, 100, Test User, null, null, null, null, 0, 0, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@299003eb]
+]]></system-out>
+  </testcase>
+  <testcase name="testGenerateConversationId" classname="com.example.shop.ConversationServiceTest" time="0.008"/>
+  <testcase name="testCreateOrUpdateConversation" classname="com.example.shop.ConversationServiceTest" time="0.052">
+    <failure message="expected: &lt;2&gt; but was: &lt;1&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:538)
+	at com.example.shop.ConversationServiceTest.testCreateOrUpdateConversation(ConversationServiceTest.java:95)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+JDBC Connection [HikariProxyConnection@1930186237 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO user ( user_id, username, password_hash, salt, role_id, status, created_at, updated_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 100(Long), sender(String), hashedpassword(String), salt(String), 2(Integer), 1(Integer), 2026-04-23T17:14:15.148001(LocalDateTime), 2026-04-23T17:14:15.149002300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92] from current transaction
+==> Parameters: 200(Long), receiver(String), hashedpassword(String), salt(String), 2(Integer), 1(Integer), 2026-04-23T17:14:15.157306300(LocalDateTime), 2026-04-23T17:14:15.157306300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 创建或更新会话: conversationId=private_100_200, userId=200, messageId=1776935655159
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92] from current transaction
+==>  Preparing: SELECT conversation_id,user_id,conversation_type,target_id,target_name,target_avatar,last_message_id,last_message_content,last_message_time,unread_count,total_count,is_pinned,created_at,updated_at FROM conversation WHERE (conversation_id = ? AND user_id = ?)
+==> Parameters: private_100_200(String), 200(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92] from current transaction
+==>  Preparing: SELECT user_id,username,password_hash,salt,avatar,phone,role_id,balance,points,status,last_login_time,created_at,updated_at FROM user WHERE user_id=?
+==> Parameters: 100(Long)
+<==    Columns: user_id, username, password_hash, salt, avatar, phone, role_id, balance, points, status, last_login_time, created_at, updated_at
+<==        Row: 100, sender, hashedpassword, salt, null, null, 2, 0.00, 0, 1, null, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92] from current transaction
+==>  Preparing: INSERT INTO conversation ( conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_100_200(String), 200(Long), 1(Integer), 100(Long), sender(String), null, 1776935655159(Long), Hello World(String), 2026-04-23T17:14:15.160686(LocalDateTime), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:15.167690300(LocalDateTime), 2026-04-23T17:14:15.167690300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 创建新会话成功: conversationId=private_100_200, userId=200
+2026-04-23 17:14:15 [main] DEBUG c.e.s.s.impl.ConversationServiceImpl - 获取会话信息: conversationId=private_100_200, userId=200
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92] from current transaction
+==> Parameters: private_100_200(String), 200(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 200, 1, 100, sender, null, 1776935655159, Hello World, 2026-04-23 17:14:15, 1, 1, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 创建或更新会话: conversationId=private_100_200, userId=200, messageId=1776935655176
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92] from current transaction
+==> Parameters: private_100_200(String), 200(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 200, 1, 100, sender, null, 1776935655159, Hello World, 2026-04-23 17:14:15, 1, 1, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92] from current transaction
+==>  Preparing: UPDATE conversation SET last_message_id = ?, last_message_content = ?, last_message_time = ?, unread_count = ?, total_count = ?, updated_at = ? WHERE conversation_id = ? AND user_id = ?
+==> Parameters: 1776935655176(Long), Hello back(String), 2026-04-23T17:14:15.176402900(LocalDateTime), 1(Integer), 2(Integer), 2026-04-23T17:14:15(LocalDateTime), private_100_200(String), 200(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 更新会话成功: conversationId=private_100_200, userId=200
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2555b92]
+]]></system-out>
+  </testcase>
+  <testcase name="testValidateConversationAccess" classname="com.example.shop.ConversationServiceTest" time="0.024">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2]
+JDBC Connection [HikariProxyConnection@399070738 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO conversation ( conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_100_200(String), 100(Long), 1(Integer), 100(Long), Test User(String), null, null, null, null, 0(Integer), 0(Integer), 0(Integer), 2026-04-23T17:14:15.201227900(LocalDateTime), 2026-04-23T17:14:15.201227900(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2]
+2026-04-23 17:14:15 [main] DEBUG c.e.s.s.impl.ConversationServiceImpl - 验证会话访问权限: conversationId=private_100_200, userId=100
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2] from current transaction
+==>  Preparing: SELECT conversation_id,user_id,conversation_type,target_id,target_name,target_avatar,last_message_id,last_message_content,last_message_time,unread_count,total_count,is_pinned,created_at,updated_at FROM conversation WHERE (conversation_id = ? AND user_id = ?)
+==> Parameters: private_100_200(String), 100(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 100, 1, 100, Test User, null, null, null, null, 0, 0, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2]
+2026-04-23 17:14:15 [main] DEBUG c.e.s.s.impl.ConversationServiceImpl - 验证会话访问权限: conversationId=private_100_200, userId=300
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2] from current transaction
+==> Parameters: private_100_200(String), 300(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2]
+2026-04-23 17:14:15 [main] DEBUG c.e.s.s.impl.ConversationServiceImpl - 验证会话访问权限: conversationId=private_999_888, userId=100
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2] from current transaction
+==> Parameters: private_999_888(String), 100(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f05d5f2]
+]]></system-out>
+  </testcase>
+  <testcase name="testDeleteConversation" classname="com.example.shop.ConversationServiceTest" time="0.021">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989]
+JDBC Connection [HikariProxyConnection@200027521 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO conversation ( conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_100_200(String), 100(Long), 1(Integer), 100(Long), Test User(String), null, null, null, null, 0(Integer), 0(Integer), 0(Integer), 2026-04-23T17:14:15.225735700(LocalDateTime), 2026-04-23T17:14:15.225735700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989] from current transaction
+==>  Preparing: SELECT conversation_id,user_id,conversation_type,target_id,target_name,target_avatar,last_message_id,last_message_content,last_message_time,unread_count,total_count,is_pinned,created_at,updated_at FROM conversation WHERE (conversation_id = ? AND user_id = ?)
+==> Parameters: private_100_200(String), 100(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 100, 1, 100, Test User, null, null, null, null, 0, 0, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989]
+2026-04-23 17:14:15 [main] INFO  c.e.s.s.impl.ConversationServiceImpl - 删除会话: conversationId=private_100_200, userId=100
+2026-04-23 17:14:15 [main] DEBUG c.e.s.s.impl.ConversationServiceImpl - 验证会话访问权限: conversationId=private_100_200, userId=100
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989] from current transaction
+==> Parameters: private_100_200(String), 100(Long)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_100_200, 100, 1, 100, Test User, null, null, null, null, 0, 0, 0, 2026-04-23 17:14:15, 2026-04-23 17:14:15
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989] from current transaction
+==>  Preparing: DELETE FROM conversation WHERE conversation_id = ? AND user_id = ?
+==> Parameters: private_100_200(String), 100(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989] from current transaction
+==> Parameters: private_100_200(String), 100(Long)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cf58989]
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.ConversationMapper">
+
+    <!-- 根据用户ID和目标ID查询会话 -->
+    <select id="selectByUserAndTarget" resultType="com.example.shop.entity.Conversation" useCache="false" flushCache="false">
+        SELECT * FROM conversation 
+        WHERE user_id = #{userId} 
+          AND target_id = #{targetId} 
+          AND conversation_type = #{conversationType}
+        LIMIT 1
+    </select>
+
+    <!-- 分页查询用户会话列表（按置顶和时间排序） - 优化版本，关联用户表获取头像 -->
+    <select id="selectConversationPage" resultType="com.example.shop.entity.Conversation" useCache="false" flushCache="false">
+        SELECT 
+            c.conversation_id,
+            c.user_id,
+            c.conversation_type,
+            c.target_id,
+            c.target_name,
+            COALESCE(u.avatar, c.target_avatar) as target_avatar,
+            c.last_message_id,
+            c.last_message_content,
+            c.last_message_time,
+            c.unread_count,
+            c.total_count,
+            c.is_pinned,
+            c.created_at,
+            c.updated_at
+        FROM conversation c
+        LEFT JOIN user u ON c.target_id = u.user_id AND c.conversation_type = 1
+        WHERE c.user_id = #{userId}
+        ORDER BY c.is_pinned DESC, c.last_message_time DESC
+    </select>
+
+    <!-- 搜索用户会话 - 优化版本使用全文索引，关联用户表获取头像 -->
+    <select id="searchConversations" resultType="com.example.shop.entity.Conversation">
+        SELECT 
+            c.conversation_id,
+            c.user_id,
+            c.conversation_type,
+            c.target_id,
+            c.target_name,
+            COALESCE(u.avatar, c.target_avatar) as target_avatar,
+            c.last_message_id,
+            c.last_message_content,
+            c.last_message_time,
+            c.unread_count,
+            c.total_count,
+            c.is_pinned,
+            c.created_at,
+            c.updated_at
+        FROM conversation c
+        LEFT JOIN user u ON c.target_id = u.user_id AND c.conversation_type = 1
+        WHERE c.user_id = #{userId} 
+          AND (
+            c.target_name LIKE CONCAT('%', #{keyword}, '%')
+            OR MATCH(c.target_name) AGAINST(#{keyword} IN NATURAL LANGUAGE MODE)
+          )
+        ORDER BY c.is_pinned DESC, c.last_message_time DESC
+    </select>
+
+    <!-- 获取用户总未读数 -->
+    <select id="selectTotalUnreadCount" resultType="java.lang.Integer" useCache="false" flushCache="false">
+        SELECT COALESCE(SUM(unread_count), 0) 
+        FROM conversation 
+        WHERE user_id = #{userId}
+    </select>
+
+    <!-- 获取用户私信未读数 -->
+    <select id="selectPrivateUnreadCount" resultType="java.lang.Integer" useCache="false" flushCache="false">
+        SELECT COALESCE(SUM(unread_count), 0) 
+        FROM conversation 
+        WHERE user_id = #{userId}
+          AND conversation_type = 1
+    </select>
+
+    <!-- 获取用户系统通知未读数 -->
+    <select id="selectSystemUnreadCount" resultType="java.lang.Integer" useCache="false" flushCache="false">
+        SELECT COALESCE(SUM(unread_count), 0) 
+        FROM conversation 
+        WHERE user_id = #{userId}
+          AND conversation_type = 2
+    </select>
+
+    <!-- 获取指定会话的未读数 -->
+    <select id="selectConversationUnreadCount" resultType="java.lang.Integer" useCache="false" flushCache="false">
+        SELECT COALESCE(unread_count, 0) 
+        FROM conversation 
+        WHERE conversation_id = #{conversationId} 
+          AND user_id = #{userId}
+    </select>
+
+    <!-- 更新会话未读数 -->
+    <update id="updateUnreadCount">
+        UPDATE conversation 
+        SET unread_count = unread_count + #{delta},
+            updated_at = NOW()
+        WHERE conversation_id = #{conversationId} 
+          AND user_id = #{userId}
+    </update>
+
+    <!-- 重置会话未读数 -->
+    <update id="resetUnreadCount">
+        UPDATE conversation 
+        SET unread_count = 0,
+            updated_at = NOW()
+        WHERE conversation_id = #{conversationId} 
+          AND user_id = #{userId}
+    </update>
+
+    <!-- 更新会话置顶状态 -->
+    <update id="updatePinnedStatus">
+        UPDATE conversation 
+        SET is_pinned = #{isPinned},
+            updated_at = NOW()
+        WHERE conversation_id = #{conversationId} 
+          AND user_id = #{userId}
+    </update>
+
+    <!-- 软删除会话（通过删除记录实现，因为会话是用户特定的） -->
+    <delete id="softDeleteConversation">
+        DELETE FROM conversation 
+        WHERE conversation_id = #{conversationId} 
+          AND user_id = #{userId}
+    </delete>
+
+    <!-- 批量获取会话信息 -->
+    <select id="selectByConversationIds" resultType="com.example.shop.entity.Conversation">
+        SELECT * FROM conversation 
+        WHERE user_id = #{userId}
+          AND conversation_id IN
+        <foreach collection="conversationIds" item="conversationId" open="(" separator="," close=")">
+            #{conversationId}
+        </foreach>
+    </select>
+
+    <!-- 插入会话记录（处理复合主键） -->
+    <insert id="insertConversation">
+        INSERT INTO conversation (
+            conversation_id, user_id, conversation_type, target_id, target_name, target_avatar,
+            last_message_id, last_message_content, last_message_time, 
+            unread_count, total_count, is_pinned, created_at, updated_at
+        ) VALUES (
+            #{conversationId}, #{userId}, #{conversationType}, #{targetId}, #{targetName}, #{targetAvatar},
+            #{lastMessageId}, #{lastMessageContent}, #{lastMessageTime},
+            #{unreadCount}, #{totalCount}, #{isPinned}, #{createdAt}, #{updatedAt}
+        )
+    </insert>
+
+    <!-- 更新会话记录（处理复合主键） -->
+    <update id="updateConversation">
+        UPDATE conversation SET
+            last_message_id = #{lastMessageId},
+            last_message_content = #{lastMessageContent},
+            last_message_time = #{lastMessageTime},
+            unread_count = #{unreadCount},
+            total_count = #{totalCount},
+            updated_at = #{updatedAt}
+        WHERE conversation_id = #{conversationId} AND user_id = #{userId}
+    </update>
+
+</mapper>

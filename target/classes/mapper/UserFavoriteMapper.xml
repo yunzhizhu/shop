@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.UserFavoriteMapper">
+
+    <!-- 根据用户ID查询收藏列表 -->
+    <select id="selectByUserId" resultType="com.example.shop.entity.UserFavorite">
+        SELECT * FROM user_favorite WHERE user_id = #{userId} ORDER BY favorite_id DESC
+    </select>
+
+    <!-- 根据用户ID和商品ID查询收藏记录 -->
+    <select id="selectByUserIdAndProductId" resultType="com.example.shop.entity.UserFavorite">
+        SELECT * FROM user_favorite WHERE user_id = #{userId} AND product_id = #{productId}
+    </select>
+
+    <!-- 删除用户收藏 -->
+    <delete id="deleteByUserIdAndProductId">
+        DELETE FROM user_favorite WHERE user_id = #{userId} AND product_id = #{productId}
+    </delete>
+
+    <!-- 查询用户收藏列表（包含商品信息） -->
+    <select id="selectFavoriteListWithProduct" resultType="com.example.shop.dto.FavoriteResponse">
+        SELECT 
+            uf.favorite_id,
+            uf.product_id,
+            p.name as product_name,
+            p.main_image,
+            p.price,
+            p.original_price,
+            p.status,
+            uf.created_at
+        FROM user_favorite uf
+        LEFT JOIN product p ON uf.product_id = p.product_id
+        WHERE uf.user_id = #{userId}
+        ORDER BY uf.created_at DESC
+    </select>
+
+    <!-- 批量删除用户收藏 -->
+    <delete id="batchDeleteByUserIdAndProductIds">
+        DELETE FROM user_favorite 
+        WHERE user_id = #{userId} 
+        AND product_id IN
+        <foreach collection="productIds" item="productId" open="(" separator="," close=")">
+            #{productId}
+        </foreach>
+    </delete>
+
+</mapper>

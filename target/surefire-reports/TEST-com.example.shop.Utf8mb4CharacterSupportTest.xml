@@ -1,0 +1,1484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.shop.Utf8mb4CharacterSupportTest" time="0.645" tests="6" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\javawork2\shop\target\test-classes;D:\javawork2\shop\target\classes;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-web\3.4.8\spring-boot-starter-web-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter\3.4.8\spring-boot-starter-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-logging\3.4.8\spring-boot-starter-logging-3.4.8.jar;D:\apache-maven-3.9.6\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar;D:\apache-maven-3.9.6\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar;D:\apache-maven-3.9.6\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;D:\apache-maven-3.9.6\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;D:\apache-maven-3.9.6\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;D:\apache-maven-3.9.6\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;D:\apache-maven-3.9.6\repository\org\yaml\snakeyaml\2.3\snakeyaml-2.3.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-json\3.4.8\spring-boot-starter-json-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.18.4\jackson-datatype-jdk8-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.18.4\jackson-module-parameter-names-2.18.4.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-tomcat\3.4.8\spring-boot-starter-tomcat-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.43\tomcat-embed-core-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.43\tomcat-embed-websocket-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-web\6.2.9\spring-web-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-beans\6.2.9\spring-beans-6.2.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-observation\1.14.9\micrometer-observation-1.14.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-commons\1.14.9\micrometer-commons-1.14.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-webmvc\6.2.9\spring-webmvc-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-context\6.2.9\spring-context-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-expression\6.2.9\spring-expression-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-security\3.4.8\spring-boot-starter-security-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-aop\6.2.9\spring-aop-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-config\6.4.8\spring-security-config-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-web\6.4.8\spring-security-web-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-validation\3.4.8\spring-boot-starter-validation-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.43\tomcat-embed-el-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\hibernate\validator\hibernate-validator\8.0.2.Final\hibernate-validator-8.0.2.Final.jar;D:\apache-maven-3.9.6\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-websocket\3.4.8\spring-boot-starter-websocket-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-messaging\6.2.9\spring-messaging-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-websocket\6.2.9\spring-websocket-6.2.9.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-spring-boot3-starter\3.5.7\mybatis-plus-spring-boot3-starter-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus\3.5.7\mybatis-plus-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-core\3.5.7\mybatis-plus-core-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-annotation\3.5.7\mybatis-plus-annotation-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-extension\3.5.7\mybatis-plus-extension-3.5.7.jar;D:\apache-maven-3.9.6\repository\org\mybatis\mybatis\3.5.16\mybatis-3.5.16.jar;D:\apache-maven-3.9.6\repository\com\github\jsqlparser\jsqlparser\4.9\jsqlparser-4.9.jar;D:\apache-maven-3.9.6\repository\org\mybatis\mybatis-spring\3.0.3\mybatis-spring-3.0.3.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-spring-boot-autoconfigure\3.5.7\mybatis-plus-spring-boot-autoconfigure-3.5.7.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-autoconfigure\3.4.8\spring-boot-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-jdbc\3.4.8\spring-boot-starter-jdbc-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-jdbc\6.2.9\spring-jdbc-6.2.9.jar;D:\apache-maven-3.9.6\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-databind\2.18.4\jackson-databind-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.4\jackson-annotations-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-core\2.18.4.1\jackson-core-2.18.4.1.jar;D:\apache-maven-3.9.6\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;D:\apache-maven-3.9.6\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-aop\3.4.8\spring-boot-starter-aop-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\aspectj\aspectjweaver\1.9.24\aspectjweaver-1.9.24.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-devtools\3.4.8\spring-boot-devtools-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot\3.4.8\spring-boot-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-test\3.4.8\spring-boot-starter-test-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-test\3.4.8\spring-boot-test-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.4.8\spring-boot-test-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;D:\apache-maven-3.9.6\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;D:\apache-maven-3.9.6\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;D:\apache-maven-3.9.6\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;D:\apache-maven-3.9.6\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;D:\apache-maven-3.9.6\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;D:\apache-maven-3.9.6\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;D:\apache-maven-3.9.6\repository\org\assertj\assertj-core\3.26.3\assertj-core-3.26.3.jar;D:\apache-maven-3.9.6\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;D:\apache-maven-3.9.6\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;D:\apache-maven-3.9.6\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;D:\apache-maven-3.9.6\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;D:\apache-maven-3.9.6\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;D:\apache-maven-3.9.6\repository\org\mockito\mockito-core\5.14.2\mockito-core-5.14.2.jar;D:\apache-maven-3.9.6\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar;D:\apache-maven-3.9.6\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;D:\apache-maven-3.9.6\repository\org\mockito\mockito-junit-jupiter\5.14.2\mockito-junit-jupiter-5.14.2.jar;D:\apache-maven-3.9.6\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;D:\apache-maven-3.9.6\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-core\6.2.9\spring-core-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-jcl\6.2.9\spring-jcl-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-test\6.2.9\spring-test-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\xmlunit\xmlunit-core\2.10.3\xmlunit-core-2.10.3.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-test\6.4.8\spring-security-test-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-core\6.4.8\spring-security-core-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-crypto\6.4.8\spring-security-crypto-6.4.8.jar;D:\apache-maven-3.9.6\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-data-redis\3.4.8\spring-boot-starter-data-redis-3.4.8.jar;D:\apache-maven-3.9.6\repository\io\lettuce\lettuce-core\6.4.2.RELEASE\lettuce-core-6.4.2.RELEASE.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-common\4.1.123.Final\netty-common-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-handler\4.1.123.Final\netty-handler-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-transport-native-unix-common\4.1.123.Final\netty-transport-native-unix-common-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-transport\4.1.123.Final\netty-transport-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\projectreactor\reactor-core\3.7.8\reactor-core-3.7.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-redis\3.4.8\spring-data-redis-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-keyvalue\3.4.8\spring-data-keyvalue-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-commons\3.4.8\spring-data-commons-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-tx\6.2.9\spring-tx-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-oxm\6.2.9\spring-oxm-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-context-support\6.2.9\spring-context-support-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson-spring-boot-starter\3.25.2\redisson-spring-boot-starter-3.25.2.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-actuator\3.4.8\spring-boot-starter-actuator-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.4.8\spring-boot-actuator-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-actuator\3.4.8\spring-boot-actuator-3.4.8.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-jakarta9\1.14.9\micrometer-jakarta9-1.14.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-core\1.14.9\micrometer-core-1.14.9.jar;D:\apache-maven-3.9.6\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;D:\apache-maven-3.9.6\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson\3.25.2\redisson-3.25.2.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-codec\4.1.123.Final\netty-codec-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-buffer\4.1.123.Final\netty-buffer-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-resolver\4.1.123.Final\netty-resolver-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-resolver-dns\4.1.123.Final\netty-resolver-dns-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-codec-dns\4.1.123.Final\netty-codec-dns-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\javax\cache\cache-api\1.1.1\cache-api-1.1.1.jar;D:\apache-maven-3.9.6\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;D:\apache-maven-3.9.6\repository\io\reactivex\rxjava3\rxjava\3.1.11\rxjava-3.1.11.jar;D:\apache-maven-3.9.6\repository\org\jboss\marshalling\jboss-marshalling\2.0.11.Final\jboss-marshalling-2.0.11.Final.jar;D:\apache-maven-3.9.6\repository\org\jboss\marshalling\jboss-marshalling-river\2.0.11.Final\jboss-marshalling-river-2.0.11.Final.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\kryo\5.5.0\kryo-5.5.0.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\reflectasm\1.11.9\reflectasm-1.11.9.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\minlog\1.3.1\minlog-1.3.1.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.18.4\jackson-dataformat-yaml-2.18.4.jar;D:\apache-maven-3.9.6\repository\org\jodd\jodd-bean\5.1.6\jodd-bean-5.1.6.jar;D:\apache-maven-3.9.6\repository\org\jodd\jodd-core\5.1.6\jodd-core-5.1.6.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson-spring-data-32\3.25.2\redisson-spring-data-32-3.25.2.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.4\jackson-datatype-jsr310-2.18.4.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="APPLICATION_NAME" value="shop"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="D:\jdk17.0.8\bin"/>
+    <property name="sun.java.command" value="C:\Users\86198\AppData\Local\Temp\surefire5546416069659178114\surefirebooter-20260423171400097_3.jar C:\Users\86198\AppData\Local\Temp\surefire5546416069659178114 2026-04-23T17-13-59_682-jvmRun1 surefire-20260423171400097_1tmp surefire_0-20260423171400097_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\javawork2\shop\target\test-classes;D:\javawork2\shop\target\classes;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-web\3.4.8\spring-boot-starter-web-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter\3.4.8\spring-boot-starter-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-logging\3.4.8\spring-boot-starter-logging-3.4.8.jar;D:\apache-maven-3.9.6\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar;D:\apache-maven-3.9.6\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar;D:\apache-maven-3.9.6\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;D:\apache-maven-3.9.6\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;D:\apache-maven-3.9.6\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;D:\apache-maven-3.9.6\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;D:\apache-maven-3.9.6\repository\org\yaml\snakeyaml\2.3\snakeyaml-2.3.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-json\3.4.8\spring-boot-starter-json-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.18.4\jackson-datatype-jdk8-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.18.4\jackson-module-parameter-names-2.18.4.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-tomcat\3.4.8\spring-boot-starter-tomcat-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.43\tomcat-embed-core-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.43\tomcat-embed-websocket-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-web\6.2.9\spring-web-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-beans\6.2.9\spring-beans-6.2.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-observation\1.14.9\micrometer-observation-1.14.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-commons\1.14.9\micrometer-commons-1.14.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-webmvc\6.2.9\spring-webmvc-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-context\6.2.9\spring-context-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-expression\6.2.9\spring-expression-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-security\3.4.8\spring-boot-starter-security-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-aop\6.2.9\spring-aop-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-config\6.4.8\spring-security-config-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-web\6.4.8\spring-security-web-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-validation\3.4.8\spring-boot-starter-validation-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.43\tomcat-embed-el-10.1.43.jar;D:\apache-maven-3.9.6\repository\org\hibernate\validator\hibernate-validator\8.0.2.Final\hibernate-validator-8.0.2.Final.jar;D:\apache-maven-3.9.6\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-websocket\3.4.8\spring-boot-starter-websocket-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-messaging\6.2.9\spring-messaging-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-websocket\6.2.9\spring-websocket-6.2.9.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-spring-boot3-starter\3.5.7\mybatis-plus-spring-boot3-starter-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus\3.5.7\mybatis-plus-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-core\3.5.7\mybatis-plus-core-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-annotation\3.5.7\mybatis-plus-annotation-3.5.7.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-extension\3.5.7\mybatis-plus-extension-3.5.7.jar;D:\apache-maven-3.9.6\repository\org\mybatis\mybatis\3.5.16\mybatis-3.5.16.jar;D:\apache-maven-3.9.6\repository\com\github\jsqlparser\jsqlparser\4.9\jsqlparser-4.9.jar;D:\apache-maven-3.9.6\repository\org\mybatis\mybatis-spring\3.0.3\mybatis-spring-3.0.3.jar;D:\apache-maven-3.9.6\repository\com\baomidou\mybatis-plus-spring-boot-autoconfigure\3.5.7\mybatis-plus-spring-boot-autoconfigure-3.5.7.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-autoconfigure\3.4.8\spring-boot-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-jdbc\3.4.8\spring-boot-starter-jdbc-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-jdbc\6.2.9\spring-jdbc-6.2.9.jar;D:\apache-maven-3.9.6\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-impl\0.11.5\jjwt-impl-0.11.5.jar;D:\apache-maven-3.9.6\repository\io\jsonwebtoken\jjwt-jackson\0.11.5\jjwt-jackson-0.11.5.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-databind\2.18.4\jackson-databind-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.4\jackson-annotations-2.18.4.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\core\jackson-core\2.18.4.1\jackson-core-2.18.4.1.jar;D:\apache-maven-3.9.6\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;D:\apache-maven-3.9.6\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-aop\3.4.8\spring-boot-starter-aop-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\aspectj\aspectjweaver\1.9.24\aspectjweaver-1.9.24.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-devtools\3.4.8\spring-boot-devtools-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot\3.4.8\spring-boot-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-test\3.4.8\spring-boot-starter-test-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-test\3.4.8\spring-boot-test-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.4.8\spring-boot-test-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;D:\apache-maven-3.9.6\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;D:\apache-maven-3.9.6\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;D:\apache-maven-3.9.6\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;D:\apache-maven-3.9.6\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;D:\apache-maven-3.9.6\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;D:\apache-maven-3.9.6\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;D:\apache-maven-3.9.6\repository\org\assertj\assertj-core\3.26.3\assertj-core-3.26.3.jar;D:\apache-maven-3.9.6\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;D:\apache-maven-3.9.6\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;D:\apache-maven-3.9.6\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;D:\apache-maven-3.9.6\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;D:\apache-maven-3.9.6\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;D:\apache-maven-3.9.6\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;D:\apache-maven-3.9.6\repository\org\mockito\mockito-core\5.14.2\mockito-core-5.14.2.jar;D:\apache-maven-3.9.6\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar;D:\apache-maven-3.9.6\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;D:\apache-maven-3.9.6\repository\org\mockito\mockito-junit-jupiter\5.14.2\mockito-junit-jupiter-5.14.2.jar;D:\apache-maven-3.9.6\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;D:\apache-maven-3.9.6\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-core\6.2.9\spring-core-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-jcl\6.2.9\spring-jcl-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-test\6.2.9\spring-test-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\xmlunit\xmlunit-core\2.10.3\xmlunit-core-2.10.3.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-test\6.4.8\spring-security-test-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-core\6.4.8\spring-security-core-6.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\security\spring-security-crypto\6.4.8\spring-security-crypto-6.4.8.jar;D:\apache-maven-3.9.6\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-data-redis\3.4.8\spring-boot-starter-data-redis-3.4.8.jar;D:\apache-maven-3.9.6\repository\io\lettuce\lettuce-core\6.4.2.RELEASE\lettuce-core-6.4.2.RELEASE.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-common\4.1.123.Final\netty-common-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-handler\4.1.123.Final\netty-handler-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-transport-native-unix-common\4.1.123.Final\netty-transport-native-unix-common-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-transport\4.1.123.Final\netty-transport-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\projectreactor\reactor-core\3.7.8\reactor-core-3.7.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-redis\3.4.8\spring-data-redis-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-keyvalue\3.4.8\spring-data-keyvalue-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\data\spring-data-commons\3.4.8\spring-data-commons-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-tx\6.2.9\spring-tx-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-oxm\6.2.9\spring-oxm-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\springframework\spring-context-support\6.2.9\spring-context-support-6.2.9.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson-spring-boot-starter\3.25.2\redisson-spring-boot-starter-3.25.2.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-starter-actuator\3.4.8\spring-boot-starter-actuator-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.4.8\spring-boot-actuator-autoconfigure-3.4.8.jar;D:\apache-maven-3.9.6\repository\org\springframework\boot\spring-boot-actuator\3.4.8\spring-boot-actuator-3.4.8.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-jakarta9\1.14.9\micrometer-jakarta9-1.14.9.jar;D:\apache-maven-3.9.6\repository\io\micrometer\micrometer-core\1.14.9\micrometer-core-1.14.9.jar;D:\apache-maven-3.9.6\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;D:\apache-maven-3.9.6\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson\3.25.2\redisson-3.25.2.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-codec\4.1.123.Final\netty-codec-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-buffer\4.1.123.Final\netty-buffer-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-resolver\4.1.123.Final\netty-resolver-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-resolver-dns\4.1.123.Final\netty-resolver-dns-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\io\netty\netty-codec-dns\4.1.123.Final\netty-codec-dns-4.1.123.Final.jar;D:\apache-maven-3.9.6\repository\javax\cache\cache-api\1.1.1\cache-api-1.1.1.jar;D:\apache-maven-3.9.6\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;D:\apache-maven-3.9.6\repository\io\reactivex\rxjava3\rxjava\3.1.11\rxjava-3.1.11.jar;D:\apache-maven-3.9.6\repository\org\jboss\marshalling\jboss-marshalling\2.0.11.Final\jboss-marshalling-2.0.11.Final.jar;D:\apache-maven-3.9.6\repository\org\jboss\marshalling\jboss-marshalling-river\2.0.11.Final\jboss-marshalling-river-2.0.11.Final.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\kryo\5.5.0\kryo-5.5.0.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\reflectasm\1.11.9\reflectasm-1.11.9.jar;D:\apache-maven-3.9.6\repository\com\esotericsoftware\minlog\1.3.1\minlog-1.3.1.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.18.4\jackson-dataformat-yaml-2.18.4.jar;D:\apache-maven-3.9.6\repository\org\jodd\jodd-bean\5.1.6\jodd-bean-5.1.6.jar;D:\apache-maven-3.9.6\repository\org\jodd\jodd-core\5.1.6\jodd-core-5.1.6.jar;D:\apache-maven-3.9.6\repository\org\redisson\redisson-spring-data-32\3.25.2\redisson-spring-data-32-3.25.2.jar;D:\apache-maven-3.9.6\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.18.4\jackson-datatype-jsr310-2.18.4.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\86198"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="D:\jdk17.0.8"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\javawork2\shop"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="GBK"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\86198\AppData\Local\Temp\surefire5546416069659178114\surefirebooter-20260423171400097_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.8+9-LTS-211"/>
+    <property name="user.name" value="86198"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="D:\apache-maven-3.9.6\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\86198\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.8"/>
+    <property name="user.dir" value="D:\javawork2\shop"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="18044"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="GBK"/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\jdk17.0.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;D:\jdk17.0.8\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;&quot;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;&quot;;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;&quot;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\jdk17.0.8\jre\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\nodejs\&quot;;D:\jdk17.0.8\bin;D:\node\;d:\cursor\resources\app\bin;C:\Program Files (x86)\Tencent\微信web开发者工具\dll;C:\Pro;ram Files\NVIDIA Corporation\NVIDIA App\NvDLISR;D:\redis-windows-7.2.4;C:\Program Files\Git\cmd;D:\MySQL\MySQL Server 8.0\bin;C:\Users\86198\AppData\Local\Microsoft\WindowsApps;D:\apache-maven-3.9.6\bin;D:\jdk17.0.8\bin;C:\Users\86198\AppData\Roaming\npm;C:\Users\86198\AppData\Local\Programs\Microsoft VS Code\bin;D:\mingw64\bin;D:\node;C:\Users\86198\AppData\Local\Programs\cursor\resources\app\bin;D:\Kiro\bin;C:\Users\86198\AppData\Local\Programs\Ollama;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.8+9-LTS-211"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[shop] "/>
+  </properties>
+  <testcase name="testUnicodePerformance" classname="com.example.shop.Utf8mb4CharacterSupportTest" time="0.425">
+    <system-out><![CDATA[2026-04-23 17:14:28 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.shop.Utf8mb4CharacterSupportTest]: Utf8mb4CharacterSupportTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-04-23 17:14:28 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.shop.ShopApplication for test class com.example.shop.Utf8mb4CharacterSupportTest
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+JDBC Connection [HikariProxyConnection@1789333339 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO message ( conversation_id, sender_id, receiver_id, content, message_type, content_type, is_read, created_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_perf_0(String), 1(Long), 2(Long), 性能测试消息 0 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.269064300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==>  Preparing: SELECT message_id,conversation_id,sender_id,receiver_id,content,message_type,content_type,image_url,is_read,created_at FROM message WHERE message_id=?
+==> Parameters: 2166(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2166, private_perf_0, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_1(String), 1(Long), 2(Long), 性能测试消息 1 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.281450300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2167(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2167, private_perf_1, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_2(String), 1(Long), 2(Long), 性能测试消息 2 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.286868700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2168(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2168, private_perf_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_3(String), 1(Long), 2(Long), 性能测试消息 3 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.291913900(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2169(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2169, private_perf_3, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_4(String), 1(Long), 2(Long), 性能测试消息 4 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.295913400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2170(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2170, private_perf_4, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_5(String), 1(Long), 2(Long), 性能测试消息 5 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.299341300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2171(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2171, private_perf_5, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_6(String), 1(Long), 2(Long), 性能测试消息 6 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.302860200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2172(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2172, private_perf_6, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_7(String), 1(Long), 2(Long), 性能测试消息 7 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.306093600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2173(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2173, private_perf_7, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_8(String), 1(Long), 2(Long), 性能测试消息 8 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.311532400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2174(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2174, private_perf_8, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_9(String), 1(Long), 2(Long), 性能测试消息 9 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.315989200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2175(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2175, private_perf_9, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_10(String), 1(Long), 2(Long), 性能测试消息 10 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.319639300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2176(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2176, private_perf_10, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_11(String), 1(Long), 2(Long), 性能测试消息 11 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.325250400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2177(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2177, private_perf_11, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_12(String), 1(Long), 2(Long), 性能测试消息 12 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.328523500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2178(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2178, private_perf_12, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_13(String), 1(Long), 2(Long), 性能测试消息 13 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.332035400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2179(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2179, private_perf_13, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_14(String), 1(Long), 2(Long), 性能测试消息 14 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.335150400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2180(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2180, private_perf_14, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_15(String), 1(Long), 2(Long), 性能测试消息 15 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.338152200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2181(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2181, private_perf_15, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_16(String), 1(Long), 2(Long), 性能测试消息 16 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.348949500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2182(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2182, private_perf_16, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_17(String), 1(Long), 2(Long), 性能测试消息 17 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.353971700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2183(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2183, private_perf_17, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_18(String), 1(Long), 2(Long), 性能测试消息 18 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.357404600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2184(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2184, private_perf_18, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_19(String), 1(Long), 2(Long), 性能测试消息 19 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.360554600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2185(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2185, private_perf_19, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_20(String), 1(Long), 2(Long), 性能测试消息 20 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.363996400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2186(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2186, private_perf_20, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_21(String), 1(Long), 2(Long), 性能测试消息 21 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.367096(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2187(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2187, private_perf_21, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_22(String), 1(Long), 2(Long), 性能测试消息 22 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.371618(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2188(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2188, private_perf_22, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_23(String), 1(Long), 2(Long), 性能测试消息 23 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.374140500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2189(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2189, private_perf_23, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_24(String), 1(Long), 2(Long), 性能测试消息 24 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.377141100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2190(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2190, private_perf_24, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_25(String), 1(Long), 2(Long), 性能测试消息 25 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.380141900(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2191(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2191, private_perf_25, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_26(String), 1(Long), 2(Long), 性能测试消息 26 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.383152300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2192(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2192, private_perf_26, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_27(String), 1(Long), 2(Long), 性能测试消息 27 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.387601300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2193(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2193, private_perf_27, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_28(String), 1(Long), 2(Long), 性能测试消息 28 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.390603(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2194(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2194, private_perf_28, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_29(String), 1(Long), 2(Long), 性能测试消息 29 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.393602300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2195(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2195, private_perf_29, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_30(String), 1(Long), 2(Long), 性能测试消息 30 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.396739700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2196(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2196, private_perf_30, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_31(String), 1(Long), 2(Long), 性能测试消息 31 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.398735800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2197(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2197, private_perf_31, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_32(String), 1(Long), 2(Long), 性能测试消息 32 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.402297900(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2198(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2198, private_perf_32, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_33(String), 1(Long), 2(Long), 性能测试消息 33 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.405586600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2199(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2199, private_perf_33, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_34(String), 1(Long), 2(Long), 性能测试消息 34 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.410974800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2200(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2200, private_perf_34, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_35(String), 1(Long), 2(Long), 性能测试消息 35 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.415255100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2201(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2201, private_perf_35, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_36(String), 1(Long), 2(Long), 性能测试消息 36 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.418446800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2202(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2202, private_perf_36, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_37(String), 1(Long), 2(Long), 性能测试消息 37 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.420456600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2203(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2203, private_perf_37, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_38(String), 1(Long), 2(Long), 性能测试消息 38 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.422499700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2204(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2204, private_perf_38, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_39(String), 1(Long), 2(Long), 性能测试消息 39 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.425834300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2205(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2205, private_perf_39, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_40(String), 1(Long), 2(Long), 性能测试消息 40 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.428834200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2206(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2206, private_perf_40, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_41(String), 1(Long), 2(Long), 性能测试消息 41 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.432887800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2207(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2207, private_perf_41, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_42(String), 1(Long), 2(Long), 性能测试消息 42 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.435414500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2208(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2208, private_perf_42, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_43(String), 1(Long), 2(Long), 性能测试消息 43 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.438828200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2209(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2209, private_perf_43, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_44(String), 1(Long), 2(Long), 性能测试消息 44 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.448797500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2210(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2210, private_perf_44, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_45(String), 1(Long), 2(Long), 性能测试消息 45 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.452412500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2211(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2211, private_perf_45, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_46(String), 1(Long), 2(Long), 性能测试消息 46 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.457818600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2212(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2212, private_perf_46, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_47(String), 1(Long), 2(Long), 性能测试消息 47 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.463778300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2213(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2213, private_perf_47, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_48(String), 1(Long), 2(Long), 性能测试消息 48 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.467680300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2214(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2214, private_perf_48, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_49(String), 1(Long), 2(Long), 性能测试消息 49 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.472083300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2215(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2215, private_perf_49, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_50(String), 1(Long), 2(Long), 性能测试消息 50 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.476282100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2216(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2216, private_perf_50, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_51(String), 1(Long), 2(Long), 性能测试消息 51 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.480051700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2217(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2217, private_perf_51, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_52(String), 1(Long), 2(Long), 性能测试消息 52 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.483460300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2218(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2218, private_perf_52, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_53(String), 1(Long), 2(Long), 性能测试消息 53 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.488002(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2219(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2219, private_perf_53, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_54(String), 1(Long), 2(Long), 性能测试消息 54 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.492009700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2220(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2220, private_perf_54, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_55(String), 1(Long), 2(Long), 性能测试消息 55 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.496937100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2221(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2221, private_perf_55, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_56(String), 1(Long), 2(Long), 性能测试消息 56 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.499950500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2222(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2222, private_perf_56, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:28
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_57(String), 1(Long), 2(Long), 性能测试消息 57 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.504574900(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2223(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2223, private_perf_57, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_58(String), 1(Long), 2(Long), 性能测试消息 58 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.510800500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2224(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2224, private_perf_58, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_59(String), 1(Long), 2(Long), 性能测试消息 59 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.514798800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2225(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2225, private_perf_59, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_60(String), 1(Long), 2(Long), 性能测试消息 60 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.518472200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2226(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2226, private_perf_60, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_61(String), 1(Long), 2(Long), 性能测试消息 61 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.524427900(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2227(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2227, private_perf_61, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_62(String), 1(Long), 2(Long), 性能测试消息 62 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.528298300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2228(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2228, private_perf_62, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_63(String), 1(Long), 2(Long), 性能测试消息 63 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.531310700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2229(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2229, private_perf_63, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_64(String), 1(Long), 2(Long), 性能测试消息 64 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.536469400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2230(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2230, private_perf_64, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_65(String), 1(Long), 2(Long), 性能测试消息 65 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.539992700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2231(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2231, private_perf_65, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_66(String), 1(Long), 2(Long), 性能测试消息 66 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.541993200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2232(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2232, private_perf_66, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_67(String), 1(Long), 2(Long), 性能测试消息 67 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.544514100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2233(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2233, private_perf_67, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_68(String), 1(Long), 2(Long), 性能测试消息 68 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.547618300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2234(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2234, private_perf_68, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_69(String), 1(Long), 2(Long), 性能测试消息 69 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.551642500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2235(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2235, private_perf_69, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_70(String), 1(Long), 2(Long), 性能测试消息 70 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.555998400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2236(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2236, private_perf_70, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_71(String), 1(Long), 2(Long), 性能测试消息 71 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.558989200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2237(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2237, private_perf_71, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_72(String), 1(Long), 2(Long), 性能测试消息 72 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.562001(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2238(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2238, private_perf_72, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_73(String), 1(Long), 2(Long), 性能测试消息 73 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.566227(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2239(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2239, private_perf_73, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_74(String), 1(Long), 2(Long), 性能测试消息 74 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.568227400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2240(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2240, private_perf_74, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_75(String), 1(Long), 2(Long), 性能测试消息 75 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.571912800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2241(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2241, private_perf_75, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_76(String), 1(Long), 2(Long), 性能测试消息 76 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.574928100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2242(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2242, private_perf_76, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_77(String), 1(Long), 2(Long), 性能测试消息 77 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.577922800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2243(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2243, private_perf_77, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_78(String), 1(Long), 2(Long), 性能测试消息 78 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.580724200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2244(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2244, private_perf_78, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_79(String), 1(Long), 2(Long), 性能测试消息 79 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.584081300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2245(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2245, private_perf_79, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_80(String), 1(Long), 2(Long), 性能测试消息 80 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.587359700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2246(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2246, private_perf_80, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_81(String), 1(Long), 2(Long), 性能测试消息 81 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.591905700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2247(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2247, private_perf_81, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_82(String), 1(Long), 2(Long), 性能测试消息 82 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.595907400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2248(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2248, private_perf_82, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_83(String), 1(Long), 2(Long), 性能测试消息 83 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.599906300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2249(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2249, private_perf_83, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_84(String), 1(Long), 2(Long), 性能测试消息 84 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.604655200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2250(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2250, private_perf_84, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_85(String), 1(Long), 2(Long), 性能测试消息 85 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.608676300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2251(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2251, private_perf_85, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_86(String), 1(Long), 2(Long), 性能测试消息 86 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.613195400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2252(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2252, private_perf_86, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_87(String), 1(Long), 2(Long), 性能测试消息 87 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.615758700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2253(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2253, private_perf_87, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_88(String), 1(Long), 2(Long), 性能测试消息 88 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.621556800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2254(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2254, private_perf_88, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_89(String), 1(Long), 2(Long), 性能测试消息 89 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.624895400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2255(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2255, private_perf_89, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_90(String), 1(Long), 2(Long), 性能测试消息 90 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.628164800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2256(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2256, private_perf_90, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_91(String), 1(Long), 2(Long), 性能测试消息 91 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.632691700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2257(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2257, private_perf_91, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_92(String), 1(Long), 2(Long), 性能测试消息 92 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.637618200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2258(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2258, private_perf_92, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_93(String), 1(Long), 2(Long), 性能测试消息 93 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.641144300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2259(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2259, private_perf_93, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_94(String), 1(Long), 2(Long), 性能测试消息 94 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.645156800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2260(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2260, private_perf_94, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_95(String), 1(Long), 2(Long), 性能测试消息 95 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.650369300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2261(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2261, private_perf_95, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_96(String), 1(Long), 2(Long), 性能测试消息 96 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.653396700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2262(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2262, private_perf_96, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_97(String), 1(Long), 2(Long), 性能测试消息 97 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.656448500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2263(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2263, private_perf_97, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_98(String), 1(Long), 2(Long), 性能测试消息 98 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.668275100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2264(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2264, private_perf_98, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: private_perf_99(String), 1(Long), 2(Long), 性能测试消息 99 😀🎉❤️🌟⭐ Unicode字符处理性能测试 中文内容测试，包含各种特殊字符：∑∏∫∞≠≤≥ 和emoji：🚀🎯🎪🎨🎭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.672346(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa] from current transaction
+==> Parameters: 2265(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2265, private_perf_99, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Unicode performance test completed in 408ms for 100 messages
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2793fafa]
+]]></system-out>
+  </testcase>
+  <testcase name="testLongUnicodeTextHandling" classname="com.example.shop.Utf8mb4CharacterSupportTest" time="0.015">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d9515d6]
+JDBC Connection [HikariProxyConnection@559276514 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO message ( conversation_id, sender_id, receiver_id, content, message_type, content_type, is_read, created_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_1_999(String), 1(Long), 999(Long), 这是一个很长的测试文本，包含各种Unicode字符：😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙😀😂🎉❤️🌟⭐✨💫🌙中文：这是中文测试内容，包含各种中文字符。English: This is English test content with various characters.日本語：これは日本語のテスト内容です。한국어: 이것은 한국어 테스트 내용입니다.العربية: هذا محتوى اختبار باللغة العربية.Русский: Это русский тестовый контент.数学符号：∑∏∫∞≠≤≥∈∉∪∩⊂⊃⊆⊇希腊字母：αβγδεζηθικλμνξοπρστυφχψω特殊符号：♠♣♥♦♪♫♬♭♮♯(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.691754400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d9515d6]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d9515d6] from current transaction
+==>  Preparing: SELECT message_id,conversation_id,sender_id,receiver_id,content,message_type,content_type,image_url,is_read,created_at FROM message WHERE message_id=?
+==> Parameters: 2266(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2266, private_1_999, 1, 999, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d9515d6]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d9515d6]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d9515d6]
+]]></system-out>
+  </testcase>
+  <testcase name="testUnicodeEdgeCases" classname="com.example.shop.Utf8mb4CharacterSupportTest" time="0.075">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+JDBC Connection [HikariProxyConnection@1109297961 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO message ( conversation_id, sender_id, receiver_id, content, message_type, content_type, is_read, created_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_edge_0(String), 1(Long), 2(Long), (String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.709799600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==>  Preparing: SELECT message_id,conversation_id,sender_id,receiver_id,content,message_type,content_type,image_url,is_read,created_at FROM message WHERE message_id=?
+==> Parameters: 2267(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2267, private_edge_0, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_1(String), 1(Long), 2(Long),  (String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.716168100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2268(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2268, private_edge_1, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_2(String), 1(Long), 2(Long), 😀(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.720167600(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2269(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2269, private_edge_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_3(String), 1(Long), 2(Long), 🏳️‍🌈(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.724690700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2270(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2270, private_edge_3, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_4(String), 1(Long), 2(Long), 👨‍👩‍👧‍👦(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.728173400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2271(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2271, private_edge_4, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_5(String), 1(Long), 2(Long), 🇺🇸(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.732193400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2272(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2272, private_edge_5, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_6(String), 1(Long), 2(Long), 🤔💭(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.736133800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2273(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2273, private_edge_6, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_7(String), 1(Long), 2(Long), Test😀End(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.740343900(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2274(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2274, private_edge_7, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_8(String), 1(Long), 2(Long), 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.745673700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2275(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2275, private_edge_8, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_9(String), 1(Long), 2(Long), ​‌‍(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.750159300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2276(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2276, private_edge_9, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_10(String), 1(Long), 2(Long), Ω≈ç√∫˜µ≤≥÷(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.754854400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2277(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2277, private_edge_10, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_11(String), 1(Long), 2(Long), œ∑´®†¥¨ˆøπ(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.758714(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2278(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2278, private_edge_11, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_12(String), 1(Long), 2(Long), ¡™£¢∞§¶•ªº–≠(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.761723500(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2279(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2279, private_edge_12, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_13(String), 1(Long), 2(Long), åß∂ƒ©˙∆˚¬…æ(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.765244100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2280(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2280, private_edge_13, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: private_edge_14(String), 1(Long), 2(Long), Œ„´‰ˇÁ¨ˆØ∏(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.768246400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0] from current transaction
+==> Parameters: 2281(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2281, private_edge_14, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@437160a0]
+]]></system-out>
+  </testcase>
+  <testcase name="testMessageServiceUnicodeHandling" classname="com.example.shop.Utf8mb4CharacterSupportTest" time="0.016">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70d5b235]
+JDBC Connection [HikariProxyConnection@1319963361 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO message ( conversation_id, sender_id, receiver_id, content, message_type, content_type, is_read, created_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_service_test(String), 1(Long), 2(Long), 通过MessageService发送的Unicode消息 😊🎉 包含各种字符：αβγ ∑∏∫ ♠♣♥♦(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.784725700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70d5b235]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70d5b235] from current transaction
+==>  Preparing: SELECT message_id,conversation_id,sender_id,receiver_id,content,message_type,content_type,image_url,is_read,created_at FROM message WHERE message_id=?
+==> Parameters: 2282(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2282, private_service_test, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70d5b235]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70d5b235]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70d5b235]
+]]></system-out>
+  </testcase>
+  <testcase name="testMessageEntityUnicodeStorage" classname="com.example.shop.Utf8mb4CharacterSupportTest" time="0.057">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+JDBC Connection [HikariProxyConnection@1457984886 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO message ( conversation_id, sender_id, receiver_id, content, message_type, content_type, is_read, created_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_1_2(String), 1(Long), 2(Long), Hello World! 😀😂🎉❤️(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.801828(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==>  Preparing: SELECT message_id,conversation_id,sender_id,receiver_id,content,message_type,content_type,image_url,is_read,created_at FROM message WHERE message_id=?
+==> Parameters: 2283(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2283, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 🌟⭐✨💫🌙(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.805293300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2284(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2284, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 👨‍👩‍👧‍👦👨‍💻👩‍🎨(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.808304300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2285(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2285, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 🇨🇳🇺🇸🇯🇵🇰🇷(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.811688200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2286(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2286, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 数学符号: ∑∏∫∞≠≤≥(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.814705400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2287(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2287, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 希腊字母: αβγδεζηθικλμνξοπρστυφχψω(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.819527100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2288(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2288, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 中文测试: 你好世界！这是一个测试消息。(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.822528700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2289(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2289, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 日文测试: こんにちは世界！これはテストメッセージです。(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.826755200(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2290(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2290, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 韩文测试: 안녕하세요 세계! 이것은 테스트 메시지입니다。(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.830093400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2291(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2291, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 阿拉伯文测试: مرحبا بالعالم! هذه رسالة اختبار。(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.833113300(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2292(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2292, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 俄文测试: Привет мир! Это тестовое сообщение。(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.836684100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2293(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2293, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 特殊符号: ♠♣♥♦♪♫♬♭♮♯(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.839700800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2294(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2294, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 箭头符号: ←↑→↓↔↕↖↗↘↙(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.842700400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2295(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2295, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: private_1_2(String), 1(Long), 2(Long), 混合内容: Hello 世界 🌍 こんにちは 😊 مرحبا 🎉(String), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.846215700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278] from current transaction
+==> Parameters: 2296(Long)
+<==    Columns: message_id, conversation_id, sender_id, receiver_id, content, message_type, content_type, image_url, is_read, created_at
+<==        Row: 2296, private_1_2, 1, 2, <<BLOB>>, 1, 1, null, 0, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4190f278]
+]]></system-out>
+  </testcase>
+  <testcase name="testConversationEntityUnicodeStorage" classname="com.example.shop.Utf8mb4CharacterSupportTest" time="0.041">
+    <system-out><![CDATA[Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+JDBC Connection [HikariProxyConnection@1583437171 wrapping com.mysql.cj.jdbc.ConnectionImpl@2140de63] will be managed by Spring
+==>  Preparing: INSERT INTO conversation ( conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: private_1_10(String), 1(Long), 1(Integer), 10(Long), 用户😀(String), /avatar/10.jpg(String), 最后消息包含emoji 😊(String), 2026-04-23T17:14:28.861391100(LocalDateTime), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.861391100(LocalDateTime), 2026-04-23T17:14:28.861391100(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840] from current transaction
+==>  Preparing: SELECT conversation_id,user_id,conversation_type,target_id,target_name,target_avatar,last_message_id,last_message_content,last_message_time,unread_count,total_count,is_pinned,created_at,updated_at FROM conversation WHERE conversation_id=?
+==> Parameters: private_1_10(String)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_1_10, 1, 1, 10, 用户😀, /avatar/10.jpg, null, 最后消息包含emoji 😊, 2026-04-23 17:14:29, 1, 1, 0, 2026-04-23 17:14:29, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840] from current transaction
+==> Parameters: private_1_11(String), 1(Long), 1(Integer), 11(Long), 🌟星星用户⭐(String), /avatar/11.jpg(String), 🎉庆祝消息🎉(String), 2026-04-23T17:14:28.879256400(LocalDateTime), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.879256400(LocalDateTime), 2026-04-23T17:14:28.879256400(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840] from current transaction
+==> Parameters: private_1_11(String)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_1_11, 1, 1, 11, 🌟星星用户⭐, /avatar/11.jpg, null, 🎉庆祝消息🎉, 2026-04-23 17:14:29, 1, 1, 0, 2026-04-23 17:14:29, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840] from current transaction
+==> Parameters: private_1_12(String), 1(Long), 1(Integer), 12(Long), 👨‍💻程序员(String), /avatar/12.jpg(String), 数学公式: E=mc²(String), 2026-04-23T17:14:28.882715700(LocalDateTime), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.882715700(LocalDateTime), 2026-04-23T17:14:28.882715700(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840] from current transaction
+==> Parameters: private_1_12(String)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_1_12, 1, 1, 12, 👨‍💻程序员, /avatar/12.jpg, null, 数学公式: E=mc², 2026-04-23 17:14:29, 1, 1, 0, 2026-04-23 17:14:29, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840] from current transaction
+==> Parameters: private_1_13(String), 1(Long), 1(Integer), 13(Long), 🇨🇳中国用户(String), /avatar/13.jpg(String), 音乐符号: ♪♫♬(String), 2026-04-23T17:14:28.886882800(LocalDateTime), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.886882800(LocalDateTime), 2026-04-23T17:14:28.886882800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840] from current transaction
+==> Parameters: private_1_13(String)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_1_13, 1, 1, 13, 🇨🇳中国用户, /avatar/13.jpg, null, 音乐符号: ♪♫♬, 2026-04-23 17:14:29, 1, 1, 0, 2026-04-23 17:14:29, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840] from current transaction
+==> Parameters: private_1_14(String), 1(Long), 1(Integer), 14(Long), Αλέξανδρος(String), /avatar/14.jpg(String), 混合语言: Hello 你好 こんにちは(String), 2026-04-23T17:14:28.889894800(LocalDateTime), 1(Integer), 1(Integer), 0(Integer), 2026-04-23T17:14:28.889894800(LocalDateTime), 2026-04-23T17:14:28.889894800(LocalDateTime)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840] from current transaction
+==> Parameters: private_1_14(String)
+<==    Columns: conversation_id, user_id, conversation_type, target_id, target_name, target_avatar, last_message_id, last_message_content, last_message_time, unread_count, total_count, is_pinned, created_at, updated_at
+<==        Row: private_1_14, 1, 1, 14, Αλέξανδρος, /avatar/14.jpg, null, 混合语言: Hello 你好 こんにちは, 2026-04-23 17:14:29, 1, 1, 0, 2026-04-23 17:14:29, 2026-04-23 17:14:29
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@272f0840]
+]]></system-out>
+  </testcase>
+</testsuite>

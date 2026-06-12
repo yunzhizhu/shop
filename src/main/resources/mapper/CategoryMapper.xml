@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.CategoryMapper">
+
+    <!-- 查询所有启用的分类 -->
+    <select id="selectAllEnabled" resultType="com.example.shop.entity.Category">
+        SELECT * FROM category WHERE status = 1 ORDER BY sort_order ASC, category_id ASC
+    </select>
+
+    <!-- 查询所有分类（包括禁用的，管理员使用） -->
+    <select id="selectAll" resultType="com.example.shop.entity.Category">
+        SELECT * FROM category ORDER BY sort_order ASC, category_id ASC
+    </select>
+
+    <!-- 根据父分类ID查询子分类 -->
+    <select id="selectByParentId" resultType="com.example.shop.entity.Category">
+        SELECT * FROM category 
+        WHERE parent_id = #{parentId} AND status = 1 
+        ORDER BY sort_order ASC, category_id ASC
+    </select>
+
+    <!-- 检查分类下是否有商品 -->
+    <select id="countProductsByCategoryId" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM product WHERE category_id = #{categoryId}
+    </select>
+
+    <!-- 检查分类下是否有子分类 -->
+    <select id="countChildrenByCategoryId" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM category WHERE parent_id = #{categoryId}
+    </select>
+
+    <!-- 获取分类树 -->
+    <select id="selectCategoryTree" resultType="com.example.shop.entity.Category">
+        SELECT * FROM category WHERE status = 1 ORDER BY sort_order ASC, category_id ASC
+    </select>
+
+</mapper>

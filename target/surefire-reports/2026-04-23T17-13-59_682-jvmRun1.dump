@@ -1,0 +1,1486 @@
+# Created at 2026-04-23T17:15:01.509
+Thread dump for process (18044@L19877525832) after 30 seconds shutdown timeout:
+"main" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/java.lang.Object.wait(Native Method)
+        at java.base@17.0.8/java.lang.Thread.join(Thread.java:1304)
+        at java.base@17.0.8/java.lang.Thread.join(Thread.java:1372)
+        at java.base@17.0.8/java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:107)
+        at java.base@17.0.8/java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+        at java.base@17.0.8/java.lang.Shutdown.runHooks(Shutdown.java:130)
+        at java.base@17.0.8/java.lang.Shutdown.exit(Shutdown.java:173)
+        at java.base@17.0.8/java.lang.Runtime.exit(Runtime.java:115)
+        at java.base@17.0.8/java.lang.System.exit(System.java:1860)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.acknowledgedExit(ForkedBooter.java:381)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:178)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@17.0.8/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+        at java.base@17.0.8/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/java.lang.Object.wait(Native Method)
+        at java.base@17.0.8/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.8/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@17.0.8/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/java.lang.Object.wait(Native Method)
+        at java.base@17.0.8/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@17.0.8/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+        at java.base@17.0.8/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+"mysql-cj-abandoned-connection-cleanup" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/java.lang.Object.wait(Native Method)
+        at java.base@17.0.8/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at app//com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"Thread-3" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.net.dns.ResolverConfigurationImpl.notifyAddrChange0(Native Method)
+        at java.base@17.0.8/sun.net.dns.ResolverConfigurationImpl$AddressChangeListener.run(ResolverConfigurationImpl.java:176)
+
+"redisson-netty-7-1" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-2" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-3" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-4" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-timer-9-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/java.lang.Thread.sleep(Native Method)
+        at app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:598)
+        at app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-5" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-6" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-7" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-8" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-9" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-10" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-11" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-12" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-13" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-14" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-15" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"TestHikariCP housekeeper" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"MySQL Statement Cancellation Timer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/java.lang.Object.wait(Native Method)
+        at java.base@17.0.8/java.lang.Object.wait(Object.java:338)
+        at java.base@17.0.8/java.util.TimerThread.mainLoop(Timer.java:537)
+        at java.base@17.0.8/java.util.TimerThread.run(Timer.java:516)
+
+"redisson-netty-12-1" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:891)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-2" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-3" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-4" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-timer-14-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/java.lang.Thread.sleep(Native Method)
+        at app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:598)
+        at app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-5" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-6" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-7" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-13-1" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-8" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-9" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-13-2" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-10" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-11" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-13-3" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-12" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-13" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-13-4" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-14" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-13-5" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-12-15" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"lettuce-timer-16-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/java.lang.Thread.sleep(Native Method)
+        at app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:598)
+        at app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"scheduling-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"TestHikariCP housekeeper" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"MySQL Statement Cancellation Timer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/java.lang.Object.wait(Native Method)
+        at java.base@17.0.8/java.lang.Object.wait(Object.java:338)
+        at java.base@17.0.8/java.util.TimerThread.mainLoop(Timer.java:537)
+        at java.base@17.0.8/java.util.TimerThread.run(Timer.java:516)
+
+"redisson-13-6" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"OrderTimeoutConsumer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:211)
+        at java.base@17.0.8/java.util.concurrent.CompletableFuture$Signaller.block(CompletableFuture.java:1864)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.CompletableFuture.waitingGet(CompletableFuture.java:1898)
+        at java.base@17.0.8/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2072)
+        at app//org.redisson.command.CommandAsyncService.getInterrupted(CommandAsyncService.java:141)
+        at app//org.redisson.RedissonBlockingQueue.take(RedissonBlockingQueue.java:89)
+        at app//com.example.shop.service.impl.OrderTimeoutServiceImpl.lambda$startTimeoutQueueConsumer$1(OrderTimeoutServiceImpl.java:202)
+        at app//com.example.shop.service.impl.OrderTimeoutServiceImpl$$Lambda$1964/0x0000019f46994000.run(Unknown Source)
+        at java.base@17.0.8/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+        at java.base@17.0.8/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"mybatis-plus-jsqlParser-120" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-1" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:891)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-2" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-3" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-4" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-timer-19-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/java.lang.Thread.sleep(Native Method)
+        at app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:598)
+        at app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-5" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-6" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-7" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-18-1" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-8" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-9" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-18-2" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-10" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-11" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-18-3" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-12" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-13" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-18-4" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-14" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-18-5" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-17-15" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"lettuce-timer-21-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/java.lang.Thread.sleep(Native Method)
+        at app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:598)
+        at app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"scheduling-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-18-6" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"OrderTimeoutConsumer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:211)
+        at java.base@17.0.8/java.util.concurrent.CompletableFuture$Signaller.block(CompletableFuture.java:1864)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.CompletableFuture.waitingGet(CompletableFuture.java:1898)
+        at java.base@17.0.8/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2072)
+        at app//org.redisson.command.CommandAsyncService.getInterrupted(CommandAsyncService.java:141)
+        at app//org.redisson.RedissonBlockingQueue.take(RedissonBlockingQueue.java:89)
+        at app//com.example.shop.service.impl.OrderTimeoutServiceImpl.lambda$startTimeoutQueueConsumer$1(OrderTimeoutServiceImpl.java:202)
+        at app//com.example.shop.service.impl.OrderTimeoutServiceImpl$$Lambda$1964/0x0000019f46994000.run(Unknown Source)
+        at java.base@17.0.8/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+        at java.base@17.0.8/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"TestHikariCP housekeeper" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"MySQL Statement Cancellation Timer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/java.lang.Object.wait(Native Method)
+        at java.base@17.0.8/java.lang.Object.wait(Object.java:338)
+        at java.base@17.0.8/java.util.TimerThread.mainLoop(Timer.java:537)
+        at java.base@17.0.8/java.util.TimerThread.run(Timer.java:516)
+
+"redisson-netty-25-1" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:891)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-2" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-3" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-4" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-timer-27-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/java.lang.Thread.sleep(Native Method)
+        at app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:598)
+        at app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-5" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-6" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-7" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-26-1" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-8" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-9" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-26-2" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-10" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-11" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-26-3" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-12" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-13" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-26-4" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-14" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-26-5" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-25-15" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"lettuce-timer-29-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/java.lang.Thread.sleep(Native Method)
+        at app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:598)
+        at app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"scheduling-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"TestHikariCP housekeeper" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"MySQL Statement Cancellation Timer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/java.lang.Object.wait(Native Method)
+        at java.base@17.0.8/java.lang.Object.wait(Object.java:338)
+        at java.base@17.0.8/java.util.TimerThread.mainLoop(Timer.java:537)
+        at java.base@17.0.8/java.util.TimerThread.run(Timer.java:516)
+
+"redisson-26-6" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+        at java.base@17.0.8/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"OrderTimeoutConsumer" 
+   java.lang.Thread.State: WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:211)
+        at java.base@17.0.8/java.util.concurrent.CompletableFuture$Signaller.block(CompletableFuture.java:1864)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+        at java.base@17.0.8/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+        at java.base@17.0.8/java.util.concurrent.CompletableFuture.waitingGet(CompletableFuture.java:1898)
+        at java.base@17.0.8/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2072)
+        at app//org.redisson.command.CommandAsyncService.getInterrupted(CommandAsyncService.java:141)
+        at app//org.redisson.RedissonBlockingQueue.take(RedissonBlockingQueue.java:89)
+        at app//com.example.shop.service.impl.OrderTimeoutServiceImpl.lambda$startTimeoutQueueConsumer$1(OrderTimeoutServiceImpl.java:202)
+        at app//com.example.shop.service.impl.OrderTimeoutServiceImpl$$Lambda$1964/0x0000019f46994000.run(Unknown Source)
+        at java.base@17.0.8/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+        at java.base@17.0.8/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"surefire-forkedjvm-last-ditch-daemon-shutdown-thread-30s" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@17.0.8/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@17.0.8/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$7.run(ForkedBooter.java:424)
+        at java.base@17.0.8/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+        at java.base@17.0.8/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base@17.0.8/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base@17.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"SpringApplicationShutdownHook" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@17.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@17.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:717)
+        at java.base@17.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1074)
+        at app//org.redisson.misc.InfinitySemaphoreLatch.await(InfinitySemaphoreLatch.java:102)
+        at app//org.redisson.misc.InfinitySemaphoreLatch.awaitUninterruptibly(InfinitySemaphoreLatch.java:94)
+        at app//org.redisson.connection.MasterSlaveConnectionManager.shutdown(MasterSlaveConnectionManager.java:533)
+        at app//org.redisson.connection.MasterSlaveConnectionManager.shutdown(MasterSlaveConnectionManager.java:490)
+        at app//org.redisson.Redisson.shutdown(Redisson.java:700)
+        at java.base@17.0.8/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base@17.0.8/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base@17.0.8/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base@17.0.8/java.lang.reflect.Method.invoke(Method.java:568)
+        at app//org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:316)
+        at app//org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:249)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+        at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1474)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+        at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1467)
+        at app//org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+        at app//org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+        at app//org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+        at app//org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+        at app//org.springframework.boot.SpringApplicationShutdownHook$$Lambda$2447/0x0000019f46c7c678.accept(Unknown Source)
+        at java.base@17.0.8/java.lang.Iterable.forEach(Iterable.java:75)
+        at app//org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-16" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+"redisson-netty-7-17" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+        at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+        at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+        at app//io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at app//io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:887)
+        at app//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+        at app//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+        at app//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+
+
+

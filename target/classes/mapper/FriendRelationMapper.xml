@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.FriendRelationMapper">
+
+    <!-- 获取用户的好友列表 -->
+    <select id="selectFriendList" resultType="com.example.shop.dto.FriendInfoResponse">
+        SELECT
+            u.user_id AS userId,
+            u.username,
+            u.avatar,
+            CASE 
+                WHEN u.phone IS NOT NULL AND LENGTH(u.phone) >= 11 
+                THEN CONCAT(SUBSTRING(u.phone, 1, 3), '****', SUBSTRING(u.phone, 8))
+                ELSE ''
+            END AS phone,
+            fr.remark,
+            fr.is_blocked AS isBlocked,
+            fr.created_at AS createdAt
+        FROM friend_relation fr
+        INNER JOIN user u ON fr.friend_id = u.user_id
+        WHERE fr.user_id = #{userId}
+        ORDER BY fr.created_at DESC
+    </select>
+
+    <!-- 获取用户的好友数量 -->
+    <select id="countFriends" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM friend_relation
+        WHERE user_id = #{userId}
+        AND is_blocked = 0
+    </select>
+
+    <!-- 检查是否是好友关系 -->
+    <select id="checkIsFriend" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM friend_relation
+        WHERE user_id = #{userId}
+        AND friend_id = #{friendId}
+        AND is_blocked = 0
+    </select>
+
+</mapper>

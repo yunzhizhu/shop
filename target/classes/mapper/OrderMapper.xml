@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.OrderMapper">
+
+    <!-- 根据订单编号查询订单 -->
+    <select id="selectByOrderNo" resultType="com.example.shop.entity.Order">
+        SELECT * FROM `order` WHERE order_no = #{orderNo} LIMIT 1
+    </select>
+
+    <!-- 分页查询用户订单列表 -->
+    <select id="selectUserOrderPage" resultType="com.example.shop.entity.Order">
+        SELECT o.*, 
+               (SELECT COUNT(*) FROM order_item WHERE order_id = o.order_id) as itemCount,
+               (SELECT product_image FROM order_item WHERE order_id = o.order_id LIMIT 1) as firstItemImage
+        FROM `order` o
+        WHERE o.user_id = #{userId}
+        <if test="status != null">
+            AND o.status = #{status}
+        </if>
+        ORDER BY o.created_at DESC
+    </select>
+
+    <!-- 分页查询用户订单列表（包含商品信息） -->
+    <resultMap id="OrderListResponseMap" type="com.example.shop.dto.OrderListResponse">
+        <id property="orderId" column="order_id"/>
+        <result property="orderNo" column="order_no"/>
+        <result property="status" column="status"/>
+        <result property="statusDesc" column="status_desc"/>
+        <result property="totalAmount" column="total_amount"/>
+        <result property="paymentAmount" column="payment_amount"/>
+        <result property="itemCount" column="item_count"/>
+        <result property="reviewedCount" column="reviewed_count"/>
+        <result property="allReviewed" column="all_reviewed"/>
+        <result property="createdAt" column="created_at"/>
+        <collection property="items" ofType="com.example.shop.dto.OrderListResponse$OrderItemInfo">
+            <result property="productId" column="product_id"/>
+            <result property="productName" column="product_name"/>
+            <result property="productImage" column="product_image"/>
+            <result property="quantity" column="quantity"/>
+            <result property="currentPrice" column="current_price"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectUserOrderPageWithItems" resultMap="OrderListResponseMap">
+        SELECT 
+            o.order_id,
+            o.order_no,
+            o.status,
+            CASE o.status
+                WHEN 0 THEN '待支付'
+                WHEN 1 THEN '已支付'
+                WHEN 2 THEN '已发货'
+                WHEN 3 THEN '已完成'
+                WHEN 4 THEN '已取消'
+                ELSE '未知状态'
+            END as status_desc,
+            o.total_amount,
+            o.payment_amount,
+            o.created_at,
+            (SELECT COUNT(*) FROM order_item WHERE order_id = o.order_id) as item_count,
+            (SELECT COUNT(*) FROM product_review WHERE order_id = o.order_id AND user_id = o.user_id) as reviewed_count,
+            CASE
+                WHEN o.status != 3 THEN 0
+                WHEN (SELECT COUNT(*) FROM order_item WHERE order_id = o.order_id) =
+                     (SELECT COUNT(*) FROM product_review WHERE order_id = o.order_id AND user_id = o.user_id)
+                THEN 1
+                ELSE 0
+            END as all_reviewed,
+            oi.product_id,
+            oi.product_name,
+            oi.product_image,
+            oi.quantity,
+            oi.current_price
+        FROM `order` o
+        LEFT JOIN (
+            SELECT 
+                order_id,
+                product_id,
+                product_name,
+                product_image,
+                quantity,
+                current_price,
+                ROW_NUMBER() OVER (PARTITION BY order_id ORDER BY item_id) as rn
+            FROM order_item
+        ) oi ON o.order_id = oi.order_id AND oi.rn &lt;= 3
+        WHERE o.user_id = #{userId}
+        <if test="status != null">
+            AND o.status = #{status}
+        </if>
+        ORDER BY o.created_at DESC, oi.rn
+    </select>
+
+    <!-- 分页查询订单列表（管理员） -->
+    <select id="selectOrderPageForAdmin" resultType="com.example.shop.dto.AdminOrderListResponse">
+        SELECT 
+            o.order_id,
+            o.order_no,
+            o.user_id,
+            u.username,
+            u.phone,
+            o.status,
+            CASE o.status
+                WHEN 0 THEN '待支付'
+                WHEN 1 THEN '已支付'
+                WHEN 2 THEN '已发货'
+                WHEN 3 THEN '已完成'
+                WHEN 4 THEN '已取消'
+                ELSE '未知状态'
+            END as status_desc,
+            o.total_amount,
+            o.payment_amount,
+            o.payment_type,
+            CASE o.payment_type
+                WHEN 1 THEN '支付宝'
+                WHEN 2 THEN '微信支付'
+                WHEN 3 THEN '余额支付'
+                ELSE NULL
+            END as payment_type_desc,
+            ua.receiver_name,
+            ua.receiver_phone,
+            (SELECT COUNT(*) FROM order_item WHERE order_id = o.order_id) as item_count,
+            o.payment_time,
+            o.delivery_time,
+            o.created_at
+        FROM `order` o
+        LEFT JOIN user u ON o.user_id = u.user_id
+        LEFT JOIN user_address ua ON o.address_id = ua.address_id
+        <where>
+            <if test="status != null">
+                AND o.status = #{status}
+            </if>
+            <if test="startTime != null">
+                AND o.created_at >= #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND o.created_at &lt;= #{endTime}
+            </if>
+            <if test="keyword != null and keyword != ''">
+                AND (
+                    o.order_no LIKE CONCAT('%', #{keyword}, '%') 
+                    OR u.username LIKE CONCAT('%', #{keyword}, '%')
+                    OR u.phone LIKE CONCAT('%', #{keyword}, '%')
+                    OR ua.receiver_name LIKE CONCAT('%', #{keyword}, '%')
+                    OR ua.receiver_phone LIKE CONCAT('%', #{keyword}, '%')
+                )
+            </if>
+        </where>
+        ORDER BY o.created_at DESC
+    </select>
+
+    <!-- 更新订单状态 -->
+    <update id="updateOrderStatus">
+        UPDATE `order` 
+        SET status = #{status}, version = version + 1
+        WHERE order_no = #{orderNo} AND version = #{version}
+    </update>
+
+    <!-- 更新支付信息 -->
+    <update id="updatePaymentInfo">
+        UPDATE `order` 
+        SET payment_type = #{paymentType},
+            payment_time = #{paymentTime},
+            status = #{status},
+            version = version + 1
+        WHERE order_no = #{orderNo} AND version = #{version}
+    </update>
+
+    <!-- 更新发货信息 -->
+    <update id="updateDeliveryInfo">
+        UPDATE `order` 
+        SET delivery_time = #{deliveryTime},
+            status = #{status},
+            version = version + 1
+        WHERE order_no = #{orderNo} AND version = #{version}
+    </update>
+
+    <!-- 获取订单详情（包含地址信息） -->
+    <select id="selectOrderDetailByOrderNo" resultType="com.example.shop.entity.Order">
+        SELECT o.*, 
+               ua.receiver_name, ua.receiver_phone, ua.province, ua.city, ua.district, ua.detail_address
+        FROM `order` o
+        LEFT JOIN user_address ua ON o.address_id = ua.address_id
+        WHERE o.order_no = #{orderNo}
+        LIMIT 1
+    </select>
+
+    <!-- 统计指定日期的订单数量 -->
+    <select id="countOrdersByDate" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM `order`
+        WHERE DATE(created_at) = #{date}
+        AND status IN (1, 2, 3)
+    </select>
+
+    <!-- 统计日期范围内的订单数量 -->
+    <select id="countOrdersByDateRange" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM `order`
+        WHERE DATE(created_at) BETWEEN #{startDate} AND #{endDate}
+        AND status IN (1, 2, 3)
+    </select>
+
+    <!-- 统计指定日期的营收 -->
+    <select id="sumRevenueByDate" resultType="java.math.BigDecimal">
+        SELECT COALESCE(SUM(payment_amount), 0)
+        FROM `order`
+        WHERE DATE(created_at) = #{date}
+        AND status IN (1, 2, 3)
+    </select>
+
+    <!-- 统计日期范围内的营收 -->
+    <select id="sumRevenueByDateRange" resultType="java.math.BigDecimal">
+        SELECT COALESCE(SUM(payment_amount), 0)
+        FROM `order`
+        WHERE DATE(created_at) BETWEEN #{startDate} AND #{endDate}
+        AND status IN (1, 2, 3)
+    </select>
+
+    <!-- 统计总营收 -->
+    <select id="sumTotalRevenue" resultType="java.math.BigDecimal">
+        SELECT COALESCE(SUM(payment_amount), 0)
+        FROM `order`
+        WHERE status IN (1, 2, 3)
+    </select>
+
+    <!-- 查询超时未支付订单 -->
+    <select id="selectExpiredOrders" resultType="com.example.shop.entity.Order">
+        SELECT * 
+        FROM `order`
+        WHERE status = 0
+        AND created_at &lt;= DATE_SUB(NOW(), INTERVAL #{timeoutMinutes} MINUTE)
+        ORDER BY created_at ASC
+        LIMIT 100
+    </select>
+
+</mapper>

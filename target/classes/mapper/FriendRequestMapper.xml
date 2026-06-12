@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.FriendRequestMapper">
+
+    <!-- 获取收到的好友请求列表 -->
+    <select id="selectReceivedRequests" resultType="com.example.shop.dto.FriendRequestResponse">
+        SELECT
+            fr.request_id AS requestId,
+            fr.from_user_id AS fromUserId,
+            u1.username AS fromUsername,
+            u1.avatar AS fromAvatar,
+            fr.to_user_id AS toUserId,
+            u2.username AS toUsername,
+            u2.avatar AS toAvatar,
+            fr.message,
+            fr.status,
+            fr.created_at AS createdAt,
+            fr.handled_at AS handledAt
+        FROM friend_request fr
+        INNER JOIN user u1 ON fr.from_user_id = u1.user_id
+        INNER JOIN user u2 ON fr.to_user_id = u2.user_id
+        WHERE fr.to_user_id = #{userId}
+        ORDER BY fr.created_at DESC
+    </select>
+
+    <!-- 获取发送的好友请求列表 -->
+    <select id="selectSentRequests" resultType="com.example.shop.dto.FriendRequestResponse">
+        SELECT
+            fr.request_id AS requestId,
+            fr.from_user_id AS fromUserId,
+            u1.username AS fromUsername,
+            u1.avatar AS fromAvatar,
+            fr.to_user_id AS toUserId,
+            u2.username AS toUsername,
+            u2.avatar AS toAvatar,
+            fr.message,
+            fr.status,
+            fr.created_at AS createdAt,
+            fr.handled_at AS handledAt
+        FROM friend_request fr
+        INNER JOIN user u1 ON fr.from_user_id = u1.user_id
+        INNER JOIN user u2 ON fr.to_user_id = u2.user_id
+        WHERE fr.from_user_id = #{userId}
+        ORDER BY fr.created_at DESC
+    </select>
+
+    <!-- 检查是否有待处理的请求 -->
+    <select id="checkPendingRequest" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM friend_request
+        WHERE from_user_id = #{fromUserId}
+        AND to_user_id = #{toUserId}
+        AND status = 0
+    </select>
+
+</mapper>

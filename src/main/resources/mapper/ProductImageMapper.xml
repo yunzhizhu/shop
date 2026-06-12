@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.ProductImageMapper">
+
+    <!-- 根据商品ID查询图片列表 -->
+    <select id="selectByProductId" resultType="com.example.shop.entity.ProductImage">
+        SELECT * FROM product_image 
+        WHERE product_id = #{productId} 
+        ORDER BY is_main DESC, sort_order DESC, image_id ASC
+    </select>
+
+    <!-- 根据商品ID查询主图 -->
+    <select id="selectMainImageByProductId" resultType="com.example.shop.entity.ProductImage">
+        SELECT * FROM product_image 
+        WHERE product_id = #{productId} AND is_main = 1 
+        LIMIT 1
+    </select>
+
+    <!-- 清除商品的所有主图标记 -->
+    <update id="clearMainImageByProductId">
+        UPDATE product_image SET is_main = 0 WHERE product_id = #{productId}
+    </update>
+
+    <!-- 设置主图 -->
+    <update id="setMainImage">
+        UPDATE product_image 
+        SET is_main = 1 
+        WHERE image_id = #{imageId} AND product_id = #{productId}
+    </update>
+
+    <!-- 根据商品ID删除所有图片 -->
+    <delete id="deleteByProductId">
+        DELETE FROM product_image WHERE product_id = #{productId}
+    </delete>
+
+</mapper>

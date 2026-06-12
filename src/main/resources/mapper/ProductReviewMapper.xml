@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.ProductReviewMapper">
+
+    <!-- 分页查询商品评价列表 -->
+    <select id="selectReviewPage" resultType="com.example.shop.entity.ProductReview">
+        SELECT pr.*, u.username, u.avatar
+        FROM product_review pr
+        LEFT JOIN user u ON pr.user_id = u.user_id
+        <where>
+            <if test="productId != null">
+                AND pr.product_id = #{productId}
+            </if>
+            <if test="rating != null">
+                AND pr.rating = #{rating}
+            </if>
+        </where>
+        ORDER BY pr.created_at DESC
+    </select>
+
+    <!-- 获取商品平均评分 -->
+    <select id="selectAvgRatingByProductId" resultType="java.lang.Double">
+        SELECT ROUND(AVG(rating), 1) FROM product_review WHERE product_id = #{productId}
+    </select>
+
+    <!-- 获取商品评价数量 -->
+    <select id="selectReviewCountByProductId" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM product_review WHERE product_id = #{productId}
+    </select>
+
+    <!-- 检查用户是否已评价该订单商品 -->
+    <select id="selectByUserIdAndOrderIdAndProductId" resultType="com.example.shop.entity.ProductReview">
+        SELECT * FROM product_review 
+        WHERE user_id = #{userId} AND order_id = #{orderId} AND product_id = #{productId}
+        LIMIT 1
+    </select>
+
+    <!-- 根据商品ID删除所有评价 -->
+    <delete id="deleteByProductId">
+        DELETE FROM product_review WHERE product_id = #{productId}
+    </delete>
+
+    <!-- 查询订单下所有商品的评价状态 -->
+    <select id="selectOrderReviewStatus" resultType="com.example.shop.dto.OrderReviewStatusResponse">
+        SELECT
+            oi.order_id,
+            oi.product_id,
+            oi.product_name,
+            oi.product_image,
+            oi.quantity,
+            oi.current_price,
+            CASE WHEN pr.review_id IS NOT NULL THEN 1 ELSE 0 END AS has_reviewed,
+            pr.review_id,
+            pr.rating,
+            pr.content
+        FROM order_item oi
+        LEFT JOIN product_review pr
+            ON pr.order_id = oi.order_id
+            AND pr.product_id = oi.product_id
+            AND pr.user_id = #{userId}
+        WHERE oi.order_id = #{orderId}
+        ORDER BY oi.item_id
+    </select>
+
+</mapper>

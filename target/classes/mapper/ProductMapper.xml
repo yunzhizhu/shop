@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.ProductMapper">
+
+    <!-- 分页查询商品列表 -->
+    <select id="selectProductPage" resultType="com.example.shop.entity.Product">
+        SELECT p.*, c.category_name as category_name
+        FROM product p
+        LEFT JOIN category c ON p.category_id = c.category_id
+        <where>
+            <if test="categoryId != null">
+                AND p.category_id = #{categoryId}
+            </if>
+            <if test="minPrice != null">
+                AND p.price >= #{minPrice}
+            </if>
+            <if test="maxPrice != null">
+                AND p.price &lt;= #{maxPrice}
+            </if>
+            <if test="status != null">
+                AND p.status = #{status}
+            </if>
+            <if test="auditStatus != null">
+                AND p.audit_status = #{auditStatus}
+            </if>
+        </where>
+        <choose>
+            <when test="sort == 'PRICE_ASC'">
+                ORDER BY p.price ASC
+            </when>
+            <when test="sort == 'PRICE_DESC'">
+                ORDER BY p.price DESC
+            </when>
+            <when test="sort == 'SALES_DESC'">
+                ORDER BY p.sales DESC
+            </when>
+            <when test="sort == 'SALES_ASC'">
+                ORDER BY p.sales ASC
+            </when>
+            <when test="sort == 'RATING_DESC'">
+                ORDER BY (SELECT AVG(rating) FROM product_review WHERE product_id = p.product_id) DESC
+            </when>
+            <otherwise>
+                ORDER BY p.created_at DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <!-- 搜索商品 -->
+    <select id="searchProducts" resultType="com.example.shop.entity.Product">
+        SELECT p.*
+        FROM product p
+        <where>
+            <if test="status != null">
+                AND p.status = #{status}
+            </if>
+            <if test="keyword != null and keyword != ''">
+                AND (p.name LIKE CONCAT('%', #{keyword}, '%') 
+                     OR p.detail LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+        </where>
+        ORDER BY p.sales DESC, p.created_at DESC
+    </select>
+
+    <!-- 搜索商品（带筛选和排序） -->
+    <select id="searchProductsWithFilters" resultType="com.example.shop.entity.Product">
+        SELECT p.*, c.category_name as category_name
+        FROM product p
+        LEFT JOIN category c ON p.category_id = c.category_id
+        <where>
+            <if test="status != null">
+                AND p.status = #{status}
+            </if>
+            <if test="auditStatus != null">
+                AND p.audit_status = #{auditStatus}
+            </if>
+            <if test="keyword != null and keyword != ''">
+                AND (p.name LIKE CONCAT('%', #{keyword}, '%') 
+                     OR p.detail LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+            <if test="minPrice != null">
+                AND p.price >= #{minPrice}
+            </if>
+            <if test="maxPrice != null">
+                AND p.price &lt;= #{maxPrice}
+            </if>
+        </where>
+        <choose>
+            <when test="sort == 'PRICE_ASC'">
+                ORDER BY p.price ASC
+            </when>
+            <when test="sort == 'PRICE_DESC'">
+                ORDER BY p.price DESC
+            </when>
+            <when test="sort == 'SALES_DESC'">
+                ORDER BY p.sales DESC
+            </when>
+            <when test="sort == 'SALES_ASC'">
+                ORDER BY p.sales ASC
+            </when>
+            <when test="sort == 'RATING_DESC'">
+                ORDER BY (SELECT AVG(rating) FROM product_review WHERE product_id = p.product_id) DESC
+            </when>
+            <otherwise>
+                ORDER BY p.sales DESC, p.created_at DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <!-- 更新商品销量 -->
+    <update id="updateSales">
+        UPDATE product 
+        SET sales = sales + #{quantity}
+        WHERE product_id = #{productId}
+          AND status = 1
+    </update>
+
+    <!-- 更新商品库存 -->
+    <update id="updateStock">
+        UPDATE product 
+        SET stock = stock - #{quantity}
+        WHERE product_id = #{productId} AND stock >= #{quantity}
+    </update>
+
+    <!-- 预占库存 -->
+    <update id="reserveStock">
+        UPDATE product 
+        SET reserved_stock = reserved_stock + #{quantity}
+        WHERE product_id = #{productId} 
+        AND (stock - reserved_stock) >= #{quantity}
+    </update>
+
+    <!-- 释放预占库存 -->
+    <update id="releaseReservedStock">
+        UPDATE product 
+        SET reserved_stock = reserved_stock - #{quantity}
+        WHERE product_id = #{productId} 
+        AND reserved_stock >= #{quantity}
+    </update>
+
+    <!-- 获取可用库存 -->
+    <select id="getAvailableStock" resultType="java.lang.Integer">
+        SELECT (stock - IFNULL(reserved_stock, 0)) as available_stock
+        FROM product 
+        WHERE product_id = #{productId}
+    </select>
+
+    <!-- 获取商品详情 -->
+    <select id="selectProductDetail" resultType="com.example.shop.entity.Product">
+        SELECT p.*, c.category_name as category_name
+        FROM product p
+        LEFT JOIN category c ON p.category_id = c.category_id
+        WHERE p.product_id = #{productId}
+    </select>
+
+    <!-- 更新商品主图 -->
+    <update id="updateMainImage">
+        UPDATE product 
+        SET main_image = #{mainImage}
+        WHERE product_id = #{productId}
+    </update>
+
+</mapper>

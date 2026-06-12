@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.CouponMapper">
+
+    <!-- 分页查询优惠券列表 -->
+    <select id="selectCouponPage" resultType="com.example.shop.entity.Coupon">
+        SELECT * FROM coupon
+        <where>
+            <if test="name != null and name != ''">
+                AND name LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="type != null">
+                AND type = #{type}
+            </if>
+            <if test="status != null">
+                AND status = #{status}
+            </if>
+        </where>
+        ORDER BY created_at DESC
+    </select>
+
+    <!-- 获取可领取的优惠券列表 -->
+    <select id="selectAvailableCoupons" resultType="com.example.shop.entity.Coupon">
+        SELECT * FROM coupon
+        WHERE status = 1
+        AND start_time &lt;= #{currentTime}
+        AND end_time >= #{currentTime}
+        AND received_count &lt; total_count
+        ORDER BY created_at DESC
+    </select>
+
+    <!-- 增加已领取数量 -->
+    <update id="increaseReceivedCount">
+        UPDATE coupon 
+        SET received_count = received_count + 1
+        WHERE coupon_id = #{couponId}
+        AND received_count &lt; total_count
+    </update>
+
+    <!-- 减少已领取数量 -->
+    <update id="decreaseReceivedCount">
+        UPDATE coupon 
+        SET received_count = received_count - 1
+        WHERE coupon_id = #{couponId}
+        AND received_count > 0
+    </update>
+
+    <!-- 检查优惠券是否可以领取 -->
+    <select id="canReceive" resultType="boolean">
+        SELECT COUNT(*) > 0 FROM coupon
+        WHERE coupon_id = #{couponId}
+        AND status = 1
+        AND start_time &lt;= #{currentTime}
+        AND end_time >= #{currentTime}
+        AND received_count &lt; total_count
+    </select>
+
+    <!-- 获取优惠券剩余数量 -->
+    <select id="getRemainingCount" resultType="java.lang.Integer">
+        SELECT (total_count - received_count) FROM coupon
+        WHERE coupon_id = #{couponId}
+    </select>
+
+</mapper>

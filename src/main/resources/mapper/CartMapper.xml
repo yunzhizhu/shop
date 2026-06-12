@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shop.mapper.CartMapper">
+
+    <!-- 根据用户ID和商品ID查询购物车项 -->
+    <select id="selectByUserIdAndProductId" resultType="com.example.shop.entity.Cart">
+        SELECT * FROM cart 
+        WHERE user_id = #{userId} AND product_id = #{productId}
+        LIMIT 1
+    </select>
+
+    <!-- 获取用户购物车列表（包含商品信息） -->
+    <select id="selectCartItemsByUserId" resultType="com.example.shop.dto.CartItemResponse">
+        SELECT 
+            c.cart_id as cartId,
+            c.product_id as productId,
+            c.quantity,
+            c.is_selected as isSelected,
+            c.version,
+            p.name,
+            p.main_image as mainImage,
+            p.price,
+            p.stock,
+            p.status
+        FROM cart c
+        LEFT JOIN product p ON c.product_id = p.product_id
+        WHERE c.user_id = #{userId}
+        ORDER BY c.created_at DESC
+    </select>
+
+    <!-- 获取用户选中的购物车项 -->
+    <select id="selectSelectedCartItems" resultType="com.example.shop.entity.Cart">
+        SELECT * FROM cart 
+        WHERE user_id = #{userId} AND is_selected = 1
+        ORDER BY created_at ASC
+    </select>
+
+    <!-- 批量更新选中状态 -->
+    <update id="updateSelectedStatus">
+        UPDATE cart 
+        SET is_selected = #{selected}
+        WHERE user_id = #{userId} 
+        AND cart_id IN
+        <foreach collection="cartIds" item="cartId" open="(" separator="," close=")">
+            #{cartId}
+        </foreach>
+    </update>
+
+    <!-- 根据用户ID删除购物车项 -->
+    <delete id="deleteByUserIdAndCartIds">
+        DELETE FROM cart 
+        WHERE user_id = #{userId} 
+        AND cart_id IN
+        <foreach collection="cartIds" item="cartId" open="(" separator="," close=")">
+            #{cartId}
+        </foreach>
+    </delete>
+
+    <!-- 删除用户选中的购物车项 -->
+    <delete id="deleteSelectedItems">
+        DELETE FROM cart 
+        WHERE user_id = #{userId} AND is_selected = 1
+    </delete>
+
+    <!-- 获取用户购物车商品总数 -->
+    <select id="countCartItems" resultType="java.lang.Integer">
+        SELECT COALESCE(SUM(quantity), 0) FROM cart WHERE user_id = #{userId}
+    </select>
+
+    <!-- 获取用户某商品在购物车中的数量 -->
+    <select id="getUserCartQuantity" resultType="java.lang.Integer">
+        SELECT COALESCE(SUM(quantity), 0) 
+        FROM cart 
+        WHERE product_id = #{productId}
+        <if test="userId != null">
+            AND user_id = #{userId}
+        </if>
+    </select>
+
+    <!-- 获取某商品在所有购物车中的总数量 -->
+    <select id="getTotalCartQuantityByProduct" resultType="java.lang.Integer">
+        SELECT COALESCE(SUM(quantity), 0) 
+        FROM cart 
+        WHERE product_id = #{productId}
+    </select>
+
+</mapper>
